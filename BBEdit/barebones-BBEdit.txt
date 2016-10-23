@@ -1,0 +1,12 @@
+BARE BONES
+http://www.barebones.com/
+
+BBEdit 11.6.2 Mac破解版
+http://www.sdifenzhou.com/bbedit1162.html
+
+五个最佳编程文本编辑器
+http://www.williamlong.info/archives/1387.html
+
+BBEdit非常适合程序员使用，可以用于编辑HTML、文本和其他代码文件，具有强大的智能搜索、代码折叠、FTP上传等功能，是程序开发不可缺少的代码编辑器。
+
+BBEdit是全球领先的专业HTML和文本编辑器。智能接口可方便地到达BBEdit最好的一流的功能，包括GREP图样匹配，搜索和替换多个文件（即使未开启的远程服务器上的文件），项目定义的工具，功能导航和众多的源代码语言的语法着色，代码折叠，FTP和SFTP打开和保存，AppleScript 的，Mac OS X的Unix的脚本支持，文字和代码完成，当然还有一个强大的HTML工具配套。
