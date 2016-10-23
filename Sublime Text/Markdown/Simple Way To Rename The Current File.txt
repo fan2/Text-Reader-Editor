@@ -1,0 +1,15 @@
+
+Simple Way To Rename The Current File
+http://www.sublimetext.com/forum/viewtopic.php?f=2&t=9534
+
+Here is the solution:
+1. Open "Preferences/Key Bindings User"
+2. Add this binding to you list of personal bindings:
+{
+    "keys": ["fn+f2"], "command": "rename_path", "args": {"paths": ["$file"]}
+}
+
+How to rename a file in Sublime Text 3?
+http://stackoverflow.com/questions/19122581/how-to-rename-a-file-in-sublime-text-3
+
+

@@ -1,0 +1,14 @@
+
+配置Sublime Text使用Markdown
+
+Windows配置Sublime Text使用Markdown，语法高亮，生成HTML
+http://code-tech.diandian.com/post/2012-11-10/40041958361
+
+MarkdownEditing：Sublime Text 2 的 Markdown 利器
+http://lucifr.com/2012/07/12/markdownediting-for-sublime-text-2/
+
+    输入 http://github.com/ttscoff/MarkdownEditing，然后在 Install Package 里找到 MarkdownEditing。
+    当然也可以手动 Clone 这个 repo 到 ~/Library/Application Support/Sublime Text 2/Packages。
+
+使用Sublime Text作为Markdown编辑器
+http://www.cnblogs.com/IPrograming/p/Sublime-markdown-editor.html

@@ -1,0 +1,8 @@
+【将Tab键自动替换为4个空格】
+http://blog.csdn.net/intel80586/article/details/8306699
+
+Preferences->Settings User新增以下KV：
+--------------------------------------------------------------------------------
+    // Set to true to insert spaces when tab is pressed
+    “translate_tabs_to_spaces”: true,
+--------------------------------------------------------------------------------

@@ -1,0 +1,76 @@
+
+主题（Preferences -> Color Scheme）：
+
+## Color Scheme - Default
+
+➜  Color Scheme - Default  pwd
+/Users/faner/Library/Application Support/Sublime Text 3/Cache/Color Scheme - Default
+➜  Color Scheme - Default  tree -L 1
+.
+├── All\ Hallow's\ Eve.tmTheme.cache
+├── Amy.tmTheme.cache
+├── Blackboard.tmTheme.cache
+├── Cobalt.tmTheme.cache
+├── Dawn.tmTheme.cache
+├── Eiffel.tmTheme.cache
+├── Espresso\ Libre.tmTheme.cache
+├── IDLE.tmTheme.cache
+├── LAZY.tmTheme.cache
+├── Mac\ Classic.tmTheme.cache
+├── MagicWB\ (Amiga).tmTheme.cache
+├── Monokai\ Bright.tmTheme.cache
+├── Monokai.tmTheme.cache
+├── Pastels\ on\ Dark.tmTheme.cache
+├── Slush\ &\ Poppies.tmTheme.cache
+├── Solarized\ (Dark).tmTheme.cache
+├── Solarized\ (Light).tmTheme.cache
+├── SpaceCadet.tmTheme.cache
+├── Sunburst.tmTheme.cache
+├── Twilight.tmTheme.cache
+├── Zenburnesque.tmTheme.cache
+└── iPlastic.tmTheme.cache
+
+0 directories, 22 files
+➜  Color Scheme - Default  
+
+
+tmTheme            | color
+-------------------|---------------------
+All\ Hallow's\ Eve | ⭐️⭐️⭐️对比度强
+Amy                | ⭐️昏暗，对比度不强
+Blackboard         | ⭐️⭐黑板，黑白对比强烈
+Cobalt             | ⭐️⭐️⭐️️⭐️️暗蓝底色，对比度强，推荐
+Dawn               | ⭐️⭐️普通白色
+Eiffel             | ⭐⭐️⭐️白色，推荐
+Espresso\ Libre    | ⭐️⭐️红黑底色，稍显昏暗
+IDLE               | ⭐️⭐️普通白色
+iPlastic           | ⭐⭐️⭐️灰白背景，推荐
+LAZY               | ⭐️⭐️普通白色
+Mac\ Classic       | ⭐⭐️⭐️白色背景，推荐
+MagicWB\ (Amiga)   | ⭐
+Monokai\ Bright    | ⭐⭐️⭐️黑色背景，推荐
+Monokai            | ⭐⭐️黑色背景，一般
+Pastels\ on\ Dark  | ⭐
+Slush\ &\ Poppies  | ⭐⭐️⭐️⭐️灰白背景，简洁推荐
+Solarized\ (Dark)  | ⭐️⭐️⭐️️⭐️️经典，推荐
+Solarized\ (Light) | ⭐️⭐️⭐️️⭐️️经典，推荐
+SpaceCadet         | ⭐
+Sunburst           | ⭐️⭐️⭐️️黑色背景，推荐
+Twilight           | ⭐⭐️黑色背景，对比一般
+Zenburnesque       | ⭐⭐️⭐️深灰背景，推荐
+
+## 安装主题
+Preferences -> Browse Packages
+
+cd Packages：
+
+### Color Scheme - Soda
+git clone https://github.com/buymeasoda/soda-theme/ Color Scheme - Soda
+
+### Color Scheme - Ciapre
+git clone https://github.com/vinhnx/Ciapre.tmTheme.git Color Scheme - Ciapre
+
+### Color Scheme - Dracula （√）
+git clone https://github.com/zenorocha/dracula-theme/ Color Scheme - Dracula
+
+
