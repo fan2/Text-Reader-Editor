@@ -1,0 +1,22 @@
+
+把 control 和 command 键位设好后，与 windows, linux 上的 emacs 使用上感觉没区别了：
+;; Add additional path is needed under Mac
+(setenv "PATH" (concat (getenv "PATH")
+":/usr/local/bin"))
+
+(setq exec-path (append exec-path
+'("/usr/local/bin")))
+
+;; keyboard for emacs running in OS X
+(setq mac-option-modifier 'hyper) ; sets the Option key as Hyper
+(setq mac-option-modifier 'super) ; sets the Option key as Super
+(setq mac-command-modifier 'meta) ; sets the Command key as Meta
+(setq mac-control-modifier 'ctrl) ; sets the Control key as Meta
+
+
+
+mac下的emacs设置
+http://blog.sina.com.cn/s/blog_7cb7399901010owq.html
+
+一年成为Emacs高手(像神一样使用编辑器)
+http://blog.csdn.net/redguardtoo/article/details/7222501/
