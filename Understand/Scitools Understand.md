@@ -45,5 +45,9 @@ Scitools 出品的 Understand 2.0。用了很多年了，比 Source Insight 强�
 ## understand - 问题
 ### [中文乱码](https://segmentfault.com/q/1010000002385460)
 
-菜单：Project | Configure Project | 
+菜单：`Project | Configure Project | File Options | Encoding`
+
+`File Encoding` 选择 `GB2312` （UTF-8，GBK？）。
+
+
 
