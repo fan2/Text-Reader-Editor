@@ -36,6 +36,13 @@ Please install Codecs33 plugin (https://github.com/seanliang/Codecs33/tree/osx).
 ### [GBK Encoding Support](https://packagecontrol.io/packages/GBK%20Encoding%20Support)
 https://github.com/akira-cn/sublime-gbk
 
+`File` 菜单将多出 `Set File Encoding to` 项，支持转码为 CJK：
+
+- Chinese Simplified (GBK)  
+- Chinese Traditional(BIG5)  
+- Korean  
+- Japanese  
+
 ### [安装 GBK](http://www.unicac.cn/share/Sublime-Text-2-layout.html)(old)
 现在 Sublime Text 2 不支持 GB2312 和 GBK 编码方式中文乱码解决方法是安装一个 GBK 的插件即可解决。
 
