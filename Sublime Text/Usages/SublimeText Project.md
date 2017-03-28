@@ -1,4 +1,6 @@
 ## [打造自己的Sublime使用环境](http://www.codesec.net/view/165691.html)
+[如何优雅地使用Sublime Text 3](http://www.jianshu.com/p/3cb5c6f2421c)  
+[使用Sublime Text3+Ctags+Cscope替代Source Insight](https://www.zybuluo.com/lanxinyuchs/note/33551)  
 
 ## [Sublime Text : 创建工程](http://www.cnblogs.com/bluestorm/p/4768383.html)
 Sublime Text 可以很方便地管理多个工程。使用 Sublime Text 的Projects，可以将不同根目录的文件组织起来成为一个工程，而不用将所有的文件都放到一个根目录下面。

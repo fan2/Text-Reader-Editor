@@ -35,22 +35,6 @@
 [20 个强大的 Sublime Text 插件](http://www.oschina.net/translate/20-powerful-sublimetext-plugins)  
 [全栈开发必备的10款 Sublime Text 插件](http://www.cnblogs.com/lhb25/p/10-essential-sublime-text-plugins.html)  
 
-### Color Scheme
-#### Dracula
-[dracula/dracula-theme](https://github.com/dracula/dracula-theme)
-
-A dark theme for Atom, Alfred, Emacs, Highlight.js, iTerm, JetBrains, Pygments, Slack, Sublime Text, TextMate, Terminal.app, Vim, Xcode, Zsh and many more.
-
-#### Ciapre
-[vinhnx/Ciapre.tmTheme](https://github.com/vinhnx/Ciapre.tmTheme)
-
-Ciapre - an easy on the eyes Sublime Text/TextMate color scheme.
-
-#### Brogrammer
-[kenwheeler/brogrammer-theme](https://github.com/kenwheeler/brogrammer-theme)
-
-Brogrammer is a flat sexy Sublime Text theme. Pushups not included.
-
 ### ClickableUrls
 [leonid-shevtsov/ClickableUrls_SublimeText](https://github.com/leonid-shevtsov/ClickableUrls_SublimeText)
 

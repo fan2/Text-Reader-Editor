@@ -107,4 +107,4 @@ Find All 之后，`⌘L` / `Ctrl+L`（Expand Selection to Line），选中所有
 
 #### 浅色系
 - Dawn：白色
-- Slush & Popies：白色
+- **Slush & Popies**：白色
