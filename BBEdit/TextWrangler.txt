@@ -1,0 +1,6 @@
+
+TextWrangler 是一款非常强大的 HTML 文本编辑器，是大名鼎鼎的 BBEdit 的兄弟软件，拥有丰富的专业功能集。
+TextWrangler 可以说是缩水版的 BBEdit，同时支持远程文件对比功能，支持两个不同文件相互拷贝到不同的地方，有点类似于 Win 下的 beyond compare。
+
+TextWrangler – 程序宅免费编辑利器 [Mac]
+http://www.appinn.com/textwrangler/
