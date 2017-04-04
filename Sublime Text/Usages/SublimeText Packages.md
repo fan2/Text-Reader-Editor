@@ -32,6 +32,7 @@
 
 ## [Sublime Text 3 插件备忘录](http://www.jianshu.com/p/9ee45b61b569)
 [Sublime Text 2/3安装使用及常用插件](http://www.cnblogs.com/dudumao/p/4054086.html)  
+[前端开发者需要的10个Sublime插件](http://web.jobbole.com/82177/)  
 [20 个强大的 Sublime Text 插件](http://www.oschina.net/translate/20-powerful-sublimetext-plugins)  
 [全栈开发必备的10款 Sublime Text 插件](http://www.cnblogs.com/lhb25/p/10-essential-sublime-text-plugins.html)  
 
@@ -66,3 +67,18 @@ This plugin underlines URLs in Sublime Text, and lets you open them with a keyst
 
 ### Markdown Preview
 [revolunet/sublimetext-markdown-preview](https://github.com/revolunet/sublimetext-markdown-preview)
+
+### [SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+
+[Sublime Text一个小插件——SideBarEnhancements](http://www.qdfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html)  
+[sublime text侧边栏插件-SideBarEnhancements](http://blog.csdn.net/sunny_girls/article/details/44134845)
+
+### [SublimeFileBrowser](https://github.com/aziz/SublimeFileBrowser)
+
+### Wrap-Plus
+[Sublime-Wrap-Plus](https://github.com/ehuss/Sublime-Wrap-Plus)
+
+### BracketHighlighter
+[facelessuser/BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
+
+[sublime text3下BracketHighlighter的配置方法](http://www.cnblogs.com/liu-l/p/3866458.html)
