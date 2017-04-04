@@ -15,3 +15,9 @@ Windows：用 中键（或 Shift+右键）。
 
     用 Alt 配合，可从已有选区中挖减；
     用 Ctrl 配合，可增加独立选区。
+
+## 扩展选区
+`⌘⇧J`：以缩进层级为依据，一层层向外选中（Expand selection to indentation）  
+`⌃⇧M`：将匹配括号中的内容选中（Expand selection to brackets）  
+
+`⌃M`：定位匹配的括号（Jump to matching bracket）  
