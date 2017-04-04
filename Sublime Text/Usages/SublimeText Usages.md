@@ -19,8 +19,16 @@
 [sublime text 2 使用介绍（包括配置文件）](http://blog.csdn.net/tk86935367/article/details/8857840)  
 [Sublime Text 2/3 配置文件详解](http://www.imjeff.cn/blog/88/)
 
+## File
+### Open
+`File | Open...` 菜单支持选择打开 **文件夹**，这在阅读编辑一个文件夹下的代码时尤其有用。
+
+使用 `⌘P` 调出文件跳转搜索列表框，可快速切换当前文件夹下的文件。
+
 ## View
 ### SideBar
+`⌘+K+B`：开/关 侧边栏
+
 #### Show Open Files
 侧边栏显示所有打开文件。
 
@@ -28,7 +36,8 @@
 Hide MiniMap：关闭迷你地图。
 
 #### Enter Full Screen
-进入全屏模式
+`^⌘F`：进入全屏模式（Enter Full Screen）  
+`⇧^⌘F`：进入无干扰全屏模式（Enter Distraction Free Mode）  
 
 #### Layout
 可设置视图分割窗口：  
@@ -58,6 +67,8 @@ Indent Using Spaces：默认设置4个空格填充 tab。tab width：4。
 
 ### Word Wrap
 自动换行：点击选中，默认的 Word Wrap Column 为 Automatic，根据窗口宽度折行。
+
+[Quick Tip: Enable Sublime Text Word Wrap](http://justinseeley.com/tutorials/quick-tip-enable-sublime-text-word-wrap/)
 
 ### ruler
 Column Guide Margin：80
@@ -107,4 +118,4 @@ Find All 之后，`⌘L` / `Ctrl+L`（Expand Selection to Line），选中所有
 
 #### 浅色系
 - Dawn：白色
-- **Slush & Popies**：白色
+- **Slush & Popies**：白色(推荐)
