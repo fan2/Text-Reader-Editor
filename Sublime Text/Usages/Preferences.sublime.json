@@ -1,0 +1,19 @@
+{
+	"color_scheme": "Packages/Color Scheme - Default/Slush & Poppies.tmTheme",
+	// 字号大小
+	"font_size": 12,
+	// 行宽提示列标
+	"rulers": [80],
+	// 使光标闪动更加柔和
+	"caret_style": "phase",
+	// 高亮当前行
+	"highlight_line": true,
+	// 高亮有修改的标签
+	"highlight_modified_tabs": true,
+	// 加粗文件夹名称
+	"bold_folder_labels": true,
+	// 以当前光标所在单词填充查找搜索框
+	"find_selected_text": true,
+	// 总是以单窗口多tab模式打开
+	"open_files_in_new_window": false,
+}
