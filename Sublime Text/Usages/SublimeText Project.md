@@ -5,6 +5,11 @@
 ## [Sublime Text : 创建工程](http://www.cnblogs.com/bluestorm/p/4768383.html)
 Sublime Text 可以很方便地管理多个工程。使用 Sublime Text 的Projects，可以将不同根目录的文件组织起来成为一个工程，而不用将所有的文件都放到一个根目录下面。
 
+## 文件夹（Folders）
+Sublime Text 的 `File | Open...` 菜单支持以文件夹为单位进行打开编辑，这在编辑一个文件夹下的代码时尤其有用。
+
+使用 `⌘P` 调出文件跳转搜索列表框，可快速切换当前文件夹下的文件。
+
 ### 创建工程
 
 	Project > Add Folder to Project
