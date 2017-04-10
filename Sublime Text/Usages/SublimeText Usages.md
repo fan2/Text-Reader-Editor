@@ -1,11 +1,16 @@
 # [Sublime Text 3 文档](http://feliving.github.io/Sublime-Text-3-Documentation/)
 
 ## References
+### 竞品对比
+[Vim 党的 Sublime Text/Atom/VS Code的抉择](http://www.jianshu.com/p/4d2a01c84d85)  
+[编辑器性能测试：Atom 、VS Code、Sublime Text](http://blog.jobbole.com/109756/)  
+
 ### 入门指南
 [Sublime Text 2 强大的编辑功能](http://blog.csdn.net/qfatao/article/details/25131711)  
 [神级代码编辑器 Sublime Text 全程指南](http://www.cocoachina.com/programmer/20150715/12550.html)  
 [Sublime Text 2 - 性感无比的代码编辑器](http://www.iplaysoft.com/sublimetext.html)  
-[Sublime Text 3技巧：支持GB2312和GBK编码](http://blog.csdn.net/ubuntulover/article/details/21101979)
+[Sublime Text 3技巧：支持GB2312和GBK编码](http://blog.csdn.net/ubuntulover/article/details/21101979)  
+[Sublime Text 3 Markdown 写作设置](https://jdhao.github.io/2017/03/04/Sublime-Windows-Markdown/)
 
 ### 使用技巧
 [Sublime Text代码编辑器-初学者不知道的那些事](http://article.yeeyan.org/view/165434/302716)  
@@ -48,6 +53,8 @@ Hide MiniMap：关闭迷你地图。
 - Grid：4  
 
 切分出来窗口组（Group）
+
+[Sublime Text 3怎么将窗口布局成┣这样的布局。](https://segmentfault.com/q/1010000000491630)
 
 ### Syntax
 [在Sublime Text 2中设置任意扩展名文件的默认语法](http://www.cnblogs.com/zhangronghua/archive/2012/02/29/settingdefaultsyntaxforanyfileinsublimetext2.html)  
