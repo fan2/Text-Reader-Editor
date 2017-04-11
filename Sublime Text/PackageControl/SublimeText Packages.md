@@ -68,24 +68,28 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 [20 个强大的 Sublime Text 插件](http://www.oschina.net/translate/20-powerful-sublimetext-plugins)  
 [全栈开发必备的10款 Sublime Text 插件](http://www.cnblogs.com/lhb25/p/10-essential-sublime-text-plugins.html)  
 
-### ClickableUrls
+### [Clickable Urls](https://packagecontrol.io/packages/Clickable%20URLs)
 [leonid-shevtsov/ClickableUrls_SublimeText](https://github.com/leonid-shevtsov/ClickableUrls_SublimeText)
 
-This plugin underlines URLs in Sublime Text, and lets you open them with a keystroke (Cmd+Option+Enter by default).
+This plugin underlines URLs in Sublime Text, and lets you open them with a keystroke
 
 1. 将鼠标放置在超链接之上，使用快捷键 `option+command+enter` / `Ctrl+Alt+Enter` 即可在默认浏览器中网址。  
-2. 双指单击右键，可以Open %URL%。
+2. 或双指单击右键，可以 Open %URL%。
 
-### filterlines
+### [Filter Lines](https://packagecontrol.io/packages/Filter%20Lines)
 [davidpeckham/sublime-filterlines](https://github.com/davidpeckham/sublime-filterlines)
+
+Quickly find all lines matching a string or regular expression
 
 `Edit | Line` 菜单下将会增加两项：
 
-- `Filter with Regex`  
-- `Filter with String`
+- `Filter with Regex`：⌘K ⌘R  
+- `Filter with String`：⌘K ⌘S
 
-### DeleteBlankLines
+### [DeleteBlankLines](https://packagecontrol.io/packages/DeleteBlankLines)
 [NicholasBuse/sublime_DeleteBlankLines](https://github.com/NicholasBuse/sublime_DeleteBlankLines)
+
+Deletes blank (or surplus blank) lines from a selection
 
 [SublimeText 删除空行](http://blog.sina.com.cn/s/blog_671c54fe0102vja7.html)
 
@@ -94,32 +98,35 @@ This plugin underlines URLs in Sublime Text, and lets you open them with a keyst
 - `Delete blank lines`  
 - `Delete Surplus blank lines`
 
-### Wrap-Plus
+### [Wrap-Plus](https://packagecontrol.io/packages/Wrap%20Plus)
 [Sublime-Wrap-Plus](https://github.com/ehuss/Sublime-Wrap-Plus)
 
-### BracketHighlighter
+### [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter)
 [facelessuser/BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
 
 [sublime text3下BracketHighlighter的配置方法](http://www.cnblogs.com/liu-l/p/3866458.html)
 
 ### SideBar
-#### SyncedSideBar
-#### [SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+#### [SyncedSideBar](https://packagecontrol.io/packages/SyncedSideBar)
+
+#### [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
+[titoBouzout/SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
 
 [Sublime Text一个小插件——SideBarEnhancements](http://www.qdfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html)  
 [sublime text侧边栏插件-SideBarEnhancements](http://blog.csdn.net/sunny_girls/article/details/44134845)
 
-#### [SublimeFileBrowser](https://github.com/aziz/SublimeFileBrowser)
+#### SublimeFileBrowser
+[aziz/SublimeFileBrowser](https://github.com/aziz/SublimeFileBrowser)
 
 ### Markdown
-#### MarkdownEditing
+#### [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
 [SublimeText-Markdown/MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing)
 
-#### MarkdownTOC
+#### [MarkdownTOC](https://packagecontrol.io/packages/MarkdownTOC)
 MarkdownTOC(Table Of Contents) Plugin for Sublime Text
 
-#### Markdown Preview
+#### [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 [revolunet/sublimetext-markdown-preview](https://github.com/revolunet/sublimetext-markdown-preview)
 
-#### MarkdownLivePreview
+#### [MarkdownLivePreview](https://packagecontrol.io/packages/MarkdownLivePreview)
 A Sublime Text 3 plugin to preview your markdown as you type
