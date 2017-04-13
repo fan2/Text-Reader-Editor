@@ -51,7 +51,7 @@ MagicWB (Amiga)   | ⭐
 Monokai Bright    | ⭐⭐️⭐️黑色背景，推荐
 Monokai            | ⭐⭐️黑色背景，一般
 Pastels on Dark  | ⭐
-Slush & Poppies  | ⭐⭐️⭐️⭐️灰白背景，简洁推荐
+**Slush & Poppies**  | ⭐⭐️⭐️⭐️灰白背景，简洁推荐
 Solarized (Dark)  | ⭐️⭐️⭐️️经典，推荐
 Solarized (Light) | ⭐️⭐️⭐️️⭐️️经典，推荐
 SpaceCadet         | ⭐
@@ -61,6 +61,8 @@ Zenburnesque       | ⭐⭐️⭐️深灰背景，推荐
 
 ### 安装主题
 cd Packages：`Preferences -> Browse Packages`
+
+安装 **MarkdownEditing** 插件之后，默认安装了 `Yellow`、`Focus`、`Dark` 三种主题。
 
 #### Dracula
 [dracula/dracula-theme](https://github.com/dracula/dracula-theme)
@@ -79,6 +81,11 @@ Brogrammer is a flat sexy Sublime Text theme. Pushups not included.
 
 #### Soda
 git clone https://github.com/buymeasoda/soda-theme/ Color Scheme - Soda
+
+#### Monokai Extended
+- [Monokai - Spacegray](https://packagecontrol.io/packages/Monokai%20-%20Spacegray)：深色系  
+- [Theme - Seti Monokai](https://packagecontrol.io/packages/Theme%20-%20Seti%20Monokai)：深色系  
+- [Monokai Extended](https://packagecontrol.io/packages/Monokai%20Extended) = Origin + **_Light_**(**浅色**) + Bright(深色)  
 
 ## Settings
 通过菜单或快捷键 `⌘,` 打开设置项进行编辑。
