@@ -73,7 +73,7 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 
 This plugin underlines URLs in Sublime Text, and lets you open them with a keystroke
 
-1. 将鼠标放置在超链接之上，使用快捷键 `option+command+enter` / `Ctrl+Alt+Enter` 即可在默认浏览器中网址。  
+1. 将鼠标放置在超链接之上，使用快捷键 `option+command+enter`(`⌥⌘↩`) / `Ctrl+Alt+Enter` 即可在默认浏览器中网址。  
 2. 或双指单击右键，可以 Open %URL%。
 
 ### [Filter Lines](https://packagecontrol.io/packages/Filter%20Lines)
@@ -83,8 +83,8 @@ Quickly find all lines matching a string or regular expression
 
 `Edit | Line` 菜单下将会增加两项：
 
-- `Filter with Regex`：⌘K ⌘R  
-- `Filter with String`：⌘K ⌘S
+- **Filter with Regex**：`⌘K ⌘R`  
+- **Filter with Regexg**：`⌘K ⌘S`  
 
 ### [DeleteBlankLines](https://packagecontrol.io/packages/DeleteBlankLines)
 [NicholasBuse/sublime_DeleteBlankLines](https://github.com/NicholasBuse/sublime_DeleteBlankLines)
@@ -95,8 +95,8 @@ Deletes blank (or surplus blank) lines from a selection
 
 `Edit | Line` 菜单下将会增加两项：
 
-- `Delete blank lines`  
-- `Delete Surplus blank lines`
+- **Delete blank lines**：`^⌥Del`  
+- **Delete Surplus blank lines**：`⇧^⌥Del`  
 
 ### [Wrap-Plus](https://packagecontrol.io/packages/Wrap%20Plus)
 [Sublime-Wrap-Plus](https://github.com/ehuss/Sublime-Wrap-Plus)
@@ -107,26 +107,81 @@ Deletes blank (or surplus blank) lines from a selection
 [sublime text3下BracketHighlighter的配置方法](http://www.cnblogs.com/liu-l/p/3866458.html)
 
 ### SideBar
-#### [SyncedSideBar](https://packagecontrol.io/packages/SyncedSideBar)
-
 #### [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
 [titoBouzout/SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+
+Enhancements to Sublime Text sidebar. Files and folders.
 
 [Sublime Text一个小插件——SideBarEnhancements](http://www.qdfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html)  
 [sublime text侧边栏插件-SideBarEnhancements](http://blog.csdn.net/sunny_girls/article/details/44134845)
 
+![SideBarEnhancements-singleFile-rightContextMenu.png](images/SideBarEnhancements-singleFile-rightContextMenu.png)
+
+![SideBarEnhancements-twoFiles-rightContextMenu.png](images/SideBarEnhancements-twoFiles-rightContextMenu.png)
+
+#### [SyncedSideBar](https://packagecontrol.io/packages/SyncedSideBar)
+[TheSpyder/SyncedSideBar](https://github.com/TheSpyder/SyncedSideBar)
+
+plugin to sync project sidebar (**_folder view_**) with the currently active file.  
+As you switch tabs Sublime **highlights** only files in folders that are already expanded.   
+It accomplishes this through use of the “`reveal in side bar`” command from the default _context menu_.
+
+![SyncedSideBar-reveal_in_side_bar.png](images/SyncedSideBar-reveal_in_side_bar.png)
+
 #### SublimeFileBrowser
 [aziz/SublimeFileBrowser](https://github.com/aziz/SublimeFileBrowser)
+
+- **Browse Mode**: Left/Right Sidebar：左/右侧将新建一个 GROUP 展示当前文件所在目录。点击 `..` 可展开上级目录。`F1`快速打开 Left Sidebar。  
+- **Browse Mode**: Current file or project：新建一个 tab（不新建 GROUP ）。  
+
+- **Browse Mode**: Jump List  
+- **Browse Mode**: Jump List Quick Panel  
+
+#### [Outline](https://packagecontrol.io/packages/Outline)
+shows the outline of your document or class/function name list of your code in a sidebar-style tab.  
+展示 markdown 的 **TOC** 和 程序代码的**符号列表**(symbol list)。
+
+通过 Package Control 输入 `Outline` 默认2种模式：
+
+- Browse Mode: Outline(Left)  
+- Browse Mode: Outline(Right)  
+
+3种 `FileBrower` 与 `Outline` 混合模式：
+
+- Browse Mode:  FileBrowser Left, Outline Right  
+- Browse Mode: FileBrowser Top Left, Outline Bottom Left  
+- Browse Mode: FileBrowser Top Right, Outline Bottom Right  
+
+![Browse_Mode.png](images/Browse_Mode.png)
 
 ### Markdown
 #### [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
 [SublimeText-Markdown/MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing)
 
-#### [MarkdownTOC](https://packagecontrol.io/packages/MarkdownTOC)
-MarkdownTOC(Table Of Contents) Plugin for Sublime Text
-
 #### [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 [revolunet/sublimetext-markdown-preview](https://github.com/revolunet/sublimetext-markdown-preview)
 
+![Markdown_Preview.png](images/Markdown_Preview.png)
+
 #### [MarkdownLivePreview](https://packagecontrol.io/packages/MarkdownLivePreview)
 A Sublime Text 3 plugin to preview your markdown as you type
+
+<kbd>⌥</kbd>+<kbd>M：新建 GROUP 在右侧(Layout = Columns:2)
+
+#### [OmniMarkupPreviewer](https://packagecontrol.io/packages/OmniMarkupPreviewer)
+  **Windows, Linux:**
+  
+  * <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>O</kbd>: Preview Markup in Browser.
+  * <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>X</kbd>: Export Markup as HTML.
+  * <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd>: Copy Markup as HTML.
+  
+  **OSX:**
+  
+  * <kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>O</kbd>: Preview Markup in Browser.
+  * <kbd>⌘</kbd>+<kbd>⌥</kbd>+<kbd>X</kbd>: Export Markup as HTML.
+  * <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>C</kbd>: Copy Markup as HTML.
+
+#### [MarkdownTOC](https://packagecontrol.io/packages/MarkdownTOC)
+MarkdownTOC(Table Of Contents) Plugin for Sublime Text
+
+菜单 `Tools|MarkdownTOC` 下有两项：Insert TOC，Update TOC。
