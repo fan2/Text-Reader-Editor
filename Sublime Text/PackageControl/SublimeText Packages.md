@@ -11,7 +11,7 @@ The Sublime Text package manager that makes it exceedingly simple to find, insta
 ### Simple
 The simplest method of installation is through the Sublime Text console.
 
-通过 <kbd>control<kbd><kbd>`<kbd> 可调出 ST 的控制台，在其中执行以下代码可安装 Package Control。
+通过 <kbd>control</kbd><kbd>`</kbd> 可调出 ST 的控制台，在其中执行以下代码可安装 Package Control。
 
 ```python
 import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
@@ -86,7 +86,7 @@ Quickly find all lines matching a string or regular expression
 - **Filter with Regex**：`⌘K ⌘R`  
 - **Filter with Regexg**：`⌘K ⌘S`  
 
-### [DeleteBlankLines](https://packagecontrol.io/packages/DeleteBlankLines)
+### [Delete Blank Lines](https://packagecontrol.io/packages/DeleteBlankLines)
 [NicholasBuse/sublime_DeleteBlankLines](https://github.com/NicholasBuse/sublime_DeleteBlankLines)
 
 Deletes blank (or surplus blank) lines from a selection
@@ -106,6 +106,8 @@ Deletes blank (or surplus blank) lines from a selection
 
 [sublime text3下BracketHighlighter的配置方法](http://www.cnblogs.com/liu-l/p/3866458.html)
 
+Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `#!xml <tag></tag>`, and even custom brackets.
+
 ### SideBar
 #### [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
 [titoBouzout/SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
@@ -115,8 +117,10 @@ Enhancements to Sublime Text sidebar. Files and folders.
 [Sublime Text一个小插件——SideBarEnhancements](http://www.qdfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html)  
 [sublime text侧边栏插件-SideBarEnhancements](http://blog.csdn.net/sunny_girls/article/details/44134845)
 
+打开文件夹，在左侧边栏中右键文件，将出现包含 `Rename`、`Delete File`、`Reveal in Finder` 的上下文菜单：  
 ![SideBarEnhancements-singleFile-rightContextMenu.png](images/SideBarEnhancements-singleFile-rightContextMenu.png)
 
+同时选中2个文件，右键上下文菜单将包含 `Diff Files ...` 菜单项：  
 ![SideBarEnhancements-twoFiles-rightContextMenu.png](images/SideBarEnhancements-twoFiles-rightContextMenu.png)
 
 #### [SyncedSideBar](https://packagecontrol.io/packages/SyncedSideBar)
@@ -126,9 +130,11 @@ plugin to sync project sidebar (**_folder view_**) with the currently active fil
 As you switch tabs Sublime **highlights** only files in folders that are already expanded.   
 It accomplishes this through use of the “`reveal in side bar`” command from the default _context menu_.
 
+安装 `SyncedSideBar` 之后，右键剪辑区出现上下文菜单中将包含 `Reveal in Side Bar` 项，点击将定位到左侧边栏中的当前文件并高亮：
+
 ![SyncedSideBar-reveal_in_side_bar.png](images/SyncedSideBar-reveal_in_side_bar.png)
 
-#### SublimeFileBrowser
+#### [FileBrowser](https://packagecontrol.io/packages/FileBrowser)
 [aziz/SublimeFileBrowser](https://github.com/aziz/SublimeFileBrowser)
 
 - **Browse Mode**: Left/Right Sidebar：左/右侧将新建一个 GROUP 展示当前文件所在目录。点击 `..` 可展开上级目录。`F1`快速打开 Left Sidebar。  
@@ -139,6 +145,7 @@ It accomplishes this through use of the “`reveal in side bar`” command from 
 
 #### [Outline](https://packagecontrol.io/packages/Outline)
 shows the outline of your document or class/function name list of your code in a sidebar-style tab.  
+
 展示 markdown 的 **TOC** 和 程序代码的**符号列表**(symbol list)。
 
 通过 Package Control 输入 `Outline` 默认2种模式：
@@ -158,6 +165,10 @@ shows the outline of your document or class/function name list of your code in a
 #### [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
 [SublimeText-Markdown/MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing)
 
+安装 **MarkdownEditing** 插件之后，`View | Syntax` 下将多出 `MarkdownEditing` 项，其下包括 _`Markdown`_、_`Markdown GFM`_、_`MultiMarkdown`_ 三种 Markdown 语法，打开 Markdown 文件的默认 Syntax 将变为 _**`Markdown GFM`**_。
+
+同时 **MarkdownEditing** 插件自带安装了 `Yellow`、`Focus`、`Dark` 三种主题。
+
 #### [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 [revolunet/sublimetext-markdown-preview](https://github.com/revolunet/sublimetext-markdown-preview)
 
@@ -166,7 +177,7 @@ shows the outline of your document or class/function name list of your code in a
 #### [MarkdownLivePreview](https://packagecontrol.io/packages/MarkdownLivePreview)
 A Sublime Text 3 plugin to preview your markdown as you type
 
-<kbd>⌥</kbd>+<kbd>M：新建 GROUP 在右侧(Layout = Columns:2)
+<kbd>option</kbd>+<kbd>M</kbd>：新建 GROUP 在右侧(Layout = Columns:2) 展示实时渲染预览效果。
 
 #### [OmniMarkupPreviewer](https://packagecontrol.io/packages/OmniMarkupPreviewer)
   **Windows, Linux:**
