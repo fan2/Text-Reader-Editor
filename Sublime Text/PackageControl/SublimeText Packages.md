@@ -162,12 +162,30 @@ shows the outline of your document or class/function name list of your code in a
 ![Browse_Mode.png](images/Browse_Mode.png)
 
 ### Markdown
+[Sublime插件：Markdown篇](http://www.jianshu.com/p/aa30cc25c91b)  
+[在 Sublime 中配置 Markdown 环境](http://www.tuicool.com/articles/NJrQfub)  
+
+#### [Markdown Extended](https://packagecontrol.io/packages/Markdown%20Extended) + [Monokai Extended](https://packagecontrol.io/packages/Monokai%20Extended)
+[Markdown Extended](https://github.com/jonschlinkert/sublime-markdown-extended) + [Monokai Extended](https://github.com/jonschlinkert/sublime-monokai-extended) 是不错的 Markdown 语法渲染及配色方案，支持对多种语言的高亮。
+
+Monokai Extended 提供了 Origin、Bright(深色)、**_Light_**(**浅色**) 三种配色方案。  
+
+**Switch Themes**：
+
+Open a Markdown file in Sublime Text and make sure that syntax highlighting is set to Markdown Extended (not Markdown): `View -> Syntax -> Markdown Extended`.
+
+Then go to `Preferences -> Color Scheme -> Monokai Extended` and pick a theme.
+
+![MarkdownExtended+MonokaiExtended.png](https://camo.githubusercontent.com/e5112e65510eada23f8cdc306ba46bfe1043f201/68747470733a2f2f662e636c6f75642e6769746875622e636f6d2f6173736574732f3338333939342f3732363833332f30666465306431362d653133382d313165322d386533642d3864626663393132323465372e706e67)
+
 #### [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
 [SublimeText-Markdown/MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing)
 
-安装 **MarkdownEditing** 插件之后，`View | Syntax` 下将多出 `MarkdownEditing` 项，其下包括 _`Markdown`_、_`Markdown GFM`_、_`MultiMarkdown`_ 三种 Markdown 语法，打开 Markdown 文件的默认 Syntax 将变为 _**`Markdown GFM`**_。
+安装 **MarkdownEditing** 插件之后，`View | Syntax` 下将多出 `MarkdownEditing` 项，其下包括 _`Markdown`_、_`Markdown GFM`_、_`MultiMarkdown`_ 三种 Markdown 语法。
 
-同时 **MarkdownEditing** 插件自带安装了 `Yellow`、`Focus`、`Dark` 三种主题。
+安装了 MarkdownEditing 插件后，打开 Markdown 文件的默认 Syntax 将变为 _**`Markdown GFM`**_。支持 Github Favored Markdown 语法高亮。
+
+同时 **MarkdownEditing** 插件提供了 `Yellow`、`Focus`、`Dark` 三种主题配色方案。
 
 #### [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 [revolunet/sublimetext-markdown-preview](https://github.com/revolunet/sublimetext-markdown-preview)
@@ -180,6 +198,8 @@ A Sublime Text 3 plugin to preview your markdown as you type
 <kbd>option</kbd>+<kbd>M</kbd>：新建 GROUP 在右侧(Layout = Columns:2) 展示实时渲染预览效果。
 
 #### [OmniMarkupPreviewer](https://packagecontrol.io/packages/OmniMarkupPreviewer)
+实时在浏览器中预览。
+
   **Windows, Linux:**
   
   * <kbd>Ctrl</kbd>+<kbd>Alt</kbd>+<kbd>O</kbd>: Preview Markup in Browser.
