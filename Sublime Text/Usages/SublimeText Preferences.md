@@ -2,7 +2,7 @@
 ## Color Scheme
 
 ### Color Scheme - Default
-
+```Shell
 ➜  Color Scheme - Default  pwd
 /Users/faner/Library/Application Support/Sublime Text 3/Cache/Color Scheme - Default
 ➜  Color Scheme - Default  tree -L 1
@@ -32,37 +32,27 @@
 
 0 directories, 22 files
 ➜  Color Scheme - Default  
-
+```
 
 tmTheme            | color
 -------------------|---------------------
 All Hallow's Eve | ⭐️⭐️⭐️对比度强
-Amy                | ⭐️昏暗，对比度不强
-Blackboard         | ⭐️⭐黑板，黑白对比强烈
-Cobalt             | ⭐️⭐️⭐️️⭐️️暗蓝底色，对比度强，推荐
-Dawn               | ⭐️⭐️普通白色
-Eiffel             | ⭐⭐️⭐️白色，推荐
-Espresso Libre    | ⭐️⭐️红黑底色，稍显昏暗
-IDLE               | ⭐️⭐️普通白色
-iPlastic           | ⭐⭐️⭐️灰白背景，推荐
-LAZY               | ⭐️⭐️普通白色
-Mac Classic       | ⭐⭐️⭐️白色背景，推荐
-MagicWB (Amiga)   | ⭐
-Monokai Bright    | ⭐⭐️⭐️黑色背景，推荐
-Monokai            | ⭐⭐️黑色背景，一般
-Pastels on Dark  | ⭐
+Cobalt                   | ⭐️⭐️⭐️️⭐️️暗蓝底色，对比度强，推荐
+Dawn                    | ⭐️⭐️普通白色
+Eiffel                     | ⭐⭐️⭐️白色，推荐
+iPlastic                 | ⭐⭐️⭐️灰白背景，推荐
+Mac Classic        | ⭐⭐️⭐️白色背景，推荐
+Monokai Bright     | ⭐⭐️⭐️黑色背景，推荐
+Monokai                  | ⭐⭐️黑色背景，一般
 **Slush & Poppies**  | ⭐⭐️⭐️⭐️灰白背景，简洁推荐
-Solarized (Dark)  | ⭐️⭐️⭐️️经典，推荐
-Solarized (Light) | ⭐️⭐️⭐️️⭐️️经典，推荐
-SpaceCadet         | ⭐
-Sunburst           | ⭐️⭐️⭐️️黑色背景，推荐
-Twilight           | ⭐⭐️黑色背景，对比一般
-Zenburnesque       | ⭐⭐️⭐️深灰背景，推荐
+Solarized (Dark)   | ⭐️⭐️⭐️️经典，推荐
+Solarized (Light)  | ⭐️⭐️⭐️️⭐️️经典，推荐
+Sunburst                | ⭐️⭐️⭐️️黑色背景，推荐
+Twilight                  | ⭐⭐️黑色背景，对比一般
+Zenburnesque      | ⭐⭐️⭐️深灰背景，推荐
 
 ### 安装主题
 cd Packages：`Preferences -> Browse Packages`
-
-安装 **MarkdownEditing** 插件之后，默认安装了 `Yellow`、`Focus`、`Dark` 三种主题。
 
 #### Dracula
 [dracula/dracula-theme](https://github.com/dracula/dracula-theme)
