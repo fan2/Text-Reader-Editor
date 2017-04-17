@@ -181,11 +181,23 @@ Then go to `Preferences -> Color Scheme -> Monokai Extended` and pick a theme.
 #### [MarkdownEditing](https://packagecontrol.io/packages/MarkdownEditing)
 [SublimeText-Markdown/MarkdownEditing](https://github.com/SublimeText-Markdown/MarkdownEditing)
 
+Markdown plugin for Sublime Text. Provides a decent Markdown color scheme (light and dark) with more **robust** syntax highlighting and useful Markdown editing features for Sublime Text.
+
 安装 **MarkdownEditing** 插件之后，`View | Syntax` 下将多出 `MarkdownEditing` 项，其下包括 _`Markdown`_、_`Markdown GFM`_、_`MultiMarkdown`_ 三种 Markdown 语法。
 
 安装了 MarkdownEditing 插件后，打开 Markdown 文件的默认 Syntax 将变为 _**`Markdown GFM`**_。支持 Github Favored Markdown 语法高亮。
 
 同时 **MarkdownEditing** 插件提供了 `Yellow`、`Focus`、`Dark` 三种主题配色方案。
+
+**Key Bindings**:
+
+OS X    | Windows/Linux | Description
+--------|--------------------|------------------
+⌘1...6 | Ctrl1...6                | add the corresponding number of hashmarks for headlines.
+⌘Tab | ShiftTab	             | Fold/Unfold current section.
+⌘⇧Tab | CtrlShiftTab | Fold all sections under headings of a certain level.
+
+以上热键均与 SublimeText 已有热键冲突，只有 `⇧⇥` 可用于折叠段落（section）。
 
 #### [Markdown Preview](https://packagecontrol.io/packages/Markdown%20Preview)
 [revolunet/sublimetext-markdown-preview](https://github.com/revolunet/sublimetext-markdown-preview)
@@ -197,8 +209,10 @@ A Sublime Text 3 plugin to preview your markdown as you type
 
 <kbd>option</kbd>+<kbd>M</kbd>：新建 GROUP 在右侧(Layout = Columns:2) 展示实时渲染预览效果。
 
+渲染效果不是很好。
+
 #### [OmniMarkupPreviewer](https://packagecontrol.io/packages/OmniMarkupPreviewer)
-实时在浏览器中预览。
+实时在浏览器中预览，可替代 Markdown Preview。
 
   **Windows, Linux:**
   
