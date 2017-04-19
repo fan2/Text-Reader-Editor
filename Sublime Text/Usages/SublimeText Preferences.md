@@ -51,31 +51,32 @@ Sunburst                | ⭐️⭐️⭐️️黑色背景，推荐
 Twilight                  | ⭐⭐️黑色背景，对比一般
 Zenburnesque      | ⭐⭐️⭐️深灰背景，推荐
 
-### 安装主题
+### 安装第三方主题
 cd Packages：`Preferences -> Browse Packages`
 
-#### Dracula
-[dracula/dracula-theme](https://github.com/dracula/dracula-theme)
-
-A dark theme for Atom, Alfred, Emacs, Highlight.js, iTerm, JetBrains, Pygments, Slack, Sublime Text, TextMate, Terminal.app, Vim, Xcode, Zsh and many more.
-
-#### Ciapre
-[vinhnx/Ciapre.tmTheme](https://github.com/vinhnx/Ciapre.tmTheme)
-
-Ciapre - an easy on the eyes Sublime Text/TextMate color scheme.
-
-#### Brogrammer
+#### [Brogrammer](https://packagecontrol.io/packages/Theme%20-%20Brogrammer)
 [kenwheeler/brogrammer-theme](https://github.com/kenwheeler/brogrammer-theme)
 
 Brogrammer is a flat sexy Sublime Text theme. Pushups not included.
 
-#### Soda
-git clone https://github.com/buymeasoda/soda-theme/ Color Scheme - Soda
+#### [3024 Color Scheme](https://packagecontrol.io/packages/3024%20Color%20Scheme)
+- day  
+- **night**  
 
-#### Monokai Extended
-- [Monokai - Spacegray](https://packagecontrol.io/packages/Monokai%20-%20Spacegray)：深色系  
-- [Theme - Seti Monokai](https://packagecontrol.io/packages/Theme%20-%20Seti%20Monokai)：深色系  
-- [Monokai Extended](https://packagecontrol.io/packages/Monokai%20Extended) = Origin + **_Light_**(**浅色**) + Bright(深色)  
+#### [Monokai Extended](https://packagecontrol.io/packages/Monokai%20Extended)
+-  Origin  
+- **_Light_**(**浅色**)  
+- Bright(深色)  
+
+#### [Agila Theme](https://packagecontrol.io/packages/Agila%20Theme)
+![Preferences-Color_Scheme.png](images/Preferences-Color_Scheme.png)
+
+#### 其他
+- [ayu](https://packagecontrol.io/packages/ayu)  
+- [Theme - Soda](https://packagecontrol.io/packages/Theme%20-%20Soda)  
+- [Soda Solarized​Dark](https://packagecontrol.io/packages/Theme%20-%20Soda%20SolarizedDark)  
+- [Ciapre Color Scheme](https://packagecontrol.io/packages/Ciapre%20Color%20Scheme)  
+- [Dracula Color Scheme](https://packagecontrol.io/packages/Dracula%20Color%20Scheme)  
 
 ## Settings
 通过菜单或快捷键 `⌘,` 打开设置项进行编辑。
