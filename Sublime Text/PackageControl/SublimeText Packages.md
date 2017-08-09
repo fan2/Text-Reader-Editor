@@ -76,6 +76,15 @@ This plugin underlines URLs in Sublime Text, and lets you open them with a keyst
 1. 将鼠标放置在超链接之上，使用快捷键 `option+command+enter`(`⌥⌘↩`) / `Ctrl+Alt+Enter` 即可在默认浏览器中网址。  
 2. 或双指单击右键，可以 Open %URL%。
 
+### [FileRename](https://packagecontrol.io/packages/File%20Rename)
+[brianlow/FileRename](https://github.com/brianlow/FileRename)
+
+Rename files from the ST3 command palette
+
+**To run**:
+
+`Ctrl-Shift-P` or `Command-Shift-P` then type `File:Rename` or `fr` for short.
+
 ### [Filter Lines](https://packagecontrol.io/packages/Filter%20Lines)
 [davidpeckham/sublime-filterlines](https://github.com/davidpeckham/sublime-filterlines)
 
@@ -160,6 +169,8 @@ shows the outline of your document or class/function name list of your code in a
 - Browse Mode: FileBrowser Top Right, Outline Bottom Right  
 
 ![Browse_Mode.png](images/Browse_Mode.png)
+
+![FileBrowser_Left-Outline_Right](images/Browse_Mode=FileBrowser_Left-Outline_Right.png)
 
 ### Markdown
 [Sublime插件：Markdown篇](http://www.jianshu.com/p/aa30cc25c91b)  
