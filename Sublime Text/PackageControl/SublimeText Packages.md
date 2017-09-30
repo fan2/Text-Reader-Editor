@@ -27,6 +27,7 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 ## Package Install/Remove
 ### Package 安装
 插件的安装方法有两个：手动安装和通过插件管理器安装。
+
 #### 手动安装
 所谓手动安装，就是将下载的安装包解压缩到 Packages 目录（菜单->preferences->packages）。
 
@@ -93,7 +94,7 @@ Quickly find all lines matching a string or regular expression
 `Edit | Line` 菜单下将会增加两项：
 
 - **Filter with Regex**：`⌘K ⌘R`  
-- **Filter with Regexg**：`⌘K ⌘S`  
+- **Filter with String**：`⌘K ⌘S`  
 
 ### [Delete Blank Lines](https://packagecontrol.io/packages/DeleteBlankLines)
 [NicholasBuse/sublime_DeleteBlankLines](https://github.com/NicholasBuse/sublime_DeleteBlankLines)
@@ -124,7 +125,7 @@ Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""
 Enhancements to Sublime Text sidebar. Files and folders.
 
 [Sublime Text一个小插件——SideBarEnhancements](http://www.qdfuns.com/notes/13810/d9b9ed2fb80785dae88a5344ef0f30d4.html)  
-[sublime text侧边栏插件-SideBarEnhancements](http://blog.csdn.net/sunny_girls/article/details/44134845)
+[sublime text侧边栏插件-SideBarEnhancements](http://blog.csdn.net/sunny_girls/article/details/44134845)  
 
 打开文件夹，在左侧边栏中右键文件，将出现包含 `Rename`、`Delete File`、`Reveal in Finder` 的上下文菜单：  
 ![SideBarEnhancements-singleFile-rightContextMenu.png](images/SideBarEnhancements-singleFile-rightContextMenu.png)

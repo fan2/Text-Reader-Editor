@@ -13,15 +13,14 @@
 - `delete` / `command＋delete` 可删除所有行。  
 
 ## Find...
-[How can I filter a file for lines containing a string in Sublime Text 2?](http://superuser.com/questions/452189/how-can-i-filter-a-file-for-lines-containing-a-string-in-sublime-text-2
-)
+[How can I filter a file for lines containing a string in Sublime Text 2?](http://superuser.com/questions/452189/how-can-i-filter-a-file-for-lines-containing-a-string-in-sublime-text-2)
 
 To multi-select all lines containing a substring
 
-1. Select the string of interest.
-2. Hit `Command+F` to **Find All** occurences.
-3. Hit `Command+L` to **Expand** All Selection **Word to Line**.
-4. Then you can copy or delete all the lines containing matching words.
+1. Select the string of interest.  
+2. Hit `Command+F` to **Find All** occurences.  
+3. Hit `Command+L` to **Expand** All Selection **Word to Line**.  
+4. Then you can copy or delete all the lines containing matching words.  
 
 ![Command+F(Find).png](images/Command+F(Find).png)
 

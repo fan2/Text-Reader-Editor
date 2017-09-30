@@ -23,7 +23,7 @@ Sublime Text 的 `File | Open...` 菜单支持以文件夹为单位进行打开�
 点击保存后Sublime Text将自动生成两个文件：
 
 - project_name.sumlime-project：包含工程定义，该文件会被记录到版本控制里。  
-- project_name.sublim-workspace：包含了用户的工程数据，例如打开的文件和修改等，该文件不会被记录到版本控制里。
+- project_name.sublim-workspace：包含了用户的工程数据，例如打开的文件和修改等，该文件不会被记录到版本控制里。  
 
 在 `*.sublime-project` 文件中，你可以定义工程配置。例如你可以定义多个目录路径，或者哪些目录或文件需要排除在外。例如：
 
@@ -36,6 +36,8 @@ Sublime Text 的 `File | Open...` 菜单支持以文件夹为单位进行打开�
 2. 启动 Sublime Text，使用 Ctrl + Alt + P 快捷键，你会得到一个搜索框，该搜索框列出了所有打开过的工程名称，选中工程并打开。
 
 PS：如果直接使用 Sublime Text 编辑 `*.sublime-project`，Sublime Text 会自动载入工程，建议使用别的文本编辑器编辑 `*.sublime-project`。
+
+在打开工程时，为避免与现开窗口已有文件混在一起，可以通过 File|New Window （Shift+Command+N）新建窗口，再在新建独立窗口中打开工程。
 
 ## Clang
 SublimeClang - 支持自动补全，代码提示，静态检查，编译运行等简单功能。  
