@@ -20,7 +20,6 @@ filetype indent on
 "语法高亮显示
 sy on "syntax
 
-
 "记录历史的行数
 set history=1000
 
@@ -43,23 +42,45 @@ set ru "ruler
 set cul "cursorline
 
 "==============================================================================
-" // 缩进配置
+" // mix tab 设置
 "==============================================================================
-"tab用空格展开
-set et "expandtab
+"In Insert mode: Use the appropriate number of spaces to insert a <Tab>.
+"Spaces are used in indents with the '>' and '<' commands and when 'autoindent' is on.
+"不使用空格代替制表符，使用原生hardtabs；
+"若开启et，插入真正的制表符，需要使用CTRL-V<Tab>。
+set noet "noexpandtab
 
-"设置tab宽度为4
+"Number of spaces that a <Tab> in the file counts for.
+"制表符以空格度量的位宽
 set ts=4 "tabstop
 
+"Number of spaces to use for each step of (auto)indent.
+"Used for |'cindent'|, |>>|, |<<|, etc.
+"自动缩进所使用的空白长度指示
+set sw=4 "shiftwidth
+
+"Number of spaces that a <Tab> counts for while performing editing operations, 
+"like inserting a <Tab> or using <BS>.
+"mix of spaces and <Tab>s is used.
+"一旦设置了softtabstop的值，按下tab键将智能插入空格和制表符的混合
+set sts=4 "softtabstop
+
+"==============================================================================
+" // 缩进配置
+"==============================================================================
 "自动对齐，把当前行的对齐格式应用到下一行
 set ai "autoindent
 
 "依据上面的对齐格式，智能地选择对齐方式
 set si "smartindent
 
-
 "支持C++的缩进(cindent)
 "set cin
+
+"==============================================================================
+" // 折叠配置
+"==============================================================================
+set fen "foldenable
 
 "==============================================================================
 " // 搜索配置
@@ -67,7 +88,6 @@ set si "smartindent
 " 输入搜索内容时就显示搜索结果
 set is "incsearch
  
-
 "搜索忽略大小写 
 "set ic "ignorecase
 
