@@ -9,6 +9,9 @@ The Sublime Text package manager that makes it exceedingly simple to find, insta
 [**Sublime text 3 中Package Control 的安装与使用方法**](http://devework.com/sublime-text-3-package-control.html)  
 [10 Essential Sublime Text Plugins for Full-Stack Developers](https://www.sitepoint.com/10-essential-sublime-text-plugins-full-stack-developer/)  
 
+[解决sublime text3安装Package Control问题](http://blog.csdn.net/zr15829039341/article/details/73136319)  
+[Sublime Text 3安装Package Control插件](http://www.jianshu.com/p/7465afd9857f)  
+
 ### Simple
 The simplest method of installation is through the Sublime Text console.
 
@@ -19,22 +22,41 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 ```
 
 ### Manual
-1. 从 packagecontrol.io 网站下载 [Package Control.sublime-package](https://packagecontrol.io/Package%20Control.sublime-package)。  
+1. 从 packagecontrol.io 网站下载 [Package Control.sublime-package](https://packagecontrol.io/Package%20Control.sublime-package) @[github](https://github.com/wbond/package_control)。  
 2. 通过菜单 `Preferences | Browse Packages` 可定位到 ST3 的插件安装目录 `~/Library/Application Support/Sublime Text 3`，回退到父目录，将下载的 **`Package Control.sublime-package`** 拷贝到 `Installed Packages` 目录。  
 3. 重启 ST3，在 Preferences 菜单下将新增 Package Settings 和 Package Control 两项菜单。  
 
 ![手动拷贝Package_Control到Installed_Packages目录.png](images/手动拷贝Package_Control到Installed_Packages目录.png)
+
+### [No Package Control in v3 build 3143?](https://forum.sublimetext.com/t/no-package-control-in-v3-build-3143/31363)
+升级最新 Sublime Text 3 build 3143 之后，Preferences 菜单和 Command Palette 没有 Package Control 选项。
+
+这是因为 Sublime Text 3 默认禁用了 Package Control。
+
+按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Upgrade Package` 执行更新插件。
+
+通过菜单 `Preferences | Settings` 或在  Command Palette  中输入  `Preferences: Settings` 可打开查看 Preferences.sublime-settings — User
+
+![Preferences.sublime-settings](images/Preferences.sublime-settings.png)
+
+其中 Package Control 被加入了 **ignored_packages** 中，导致未加载 Package Control！
+
+解决方法很简单，移除或注释掉第12行的 `Package Control`，重启即可加载 Package Control。
+
+---
+
+如果是其他插件（Vintage）禁用了，可以按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Enable Package` ，找到 disable 态的插件，点击选中即可重新 enable 插件。
 
 ## Package Install/Remove
 ### Package 安装
 插件的安装方法有两个：手动安装和通过插件管理器安装。
 
 #### 手动安装
-所谓手动安装，就是将下载的安装包解压缩到 Packages 目录（菜单->preferences->packages）。
+所谓手动安装，就是将下载的安装包解压缩到 Packages 目录。通过菜单 `Preferences->Browse Packages...` 可打开插件包目录：`~/Library/Application\ Support/Sublime\ Text\ 3/Packages`。
 
 **注意**：有些插件需要重命名为指定名称，请参考具体说明。
 
-> 按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，通过 `Package Control: List Unmanaged Packages` 命令可列出手动安装不受管理器管理的插件。
+> 按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control:` 可查看相关操作命令。例如通过 `Package Control: List Unmanaged Packages` 命令可列出手动安装不受管理器管理的插件（No description provided\n unknown version）。
 
 #### 插件管理器安装
 用 Package Control 安装插件的方法：
@@ -51,13 +73,40 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 
 ![2-Clickable_URLs-Intall.png](images/2-Clickable_URLs-Intall.png)
 
-通过插件管理器（Package Control）安装的插件存放在 `~/Library/Application Support/Sublime Text 3/Installed Packages` 目录下。
+通过插件管理器（Package Control）安装的插件（*.sublime-package）存放在 `~/Library/Application Support/Sublime Text 3/Installed Packages` 目录下。
 
 ![3-Clickable_URLs-Installed.png](images/3-Clickable_URLs-Installed.png)
 
 > 有的网络环境可能会不允许访问陌生的网络环境从而设置防火墙，而 Sublime Text 貌似无法设置代理，则无法获取到安装包列表了。此时，只能通过手工安装。  
 >  
 > 按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，通过 `Package Control: List Packages` 命令可列出所有安装的插件。  
+
+#### 将 Package 创建 sublime-package
+按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Create Package File`  将列举出手动安装的插件（Unmanaged Packages），点击选中将创建。
+
+### 插件更新
+按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Upgrade Package` 执行更新插件。
+
+```Shell
+Package Control: Error downloading channel. URL error EOF occurred in violation of protocol (_ssl.c:548) downloading https://packagecontrol.io/channel_v3.json.
+Package Control: Error downloading channel. URL error _ssl.c:532: The handshake operation timed out downloading https://packagecontrol.io/channel_v3.json.
+```
+
+通过 `ping sublime.wbond.net` 得到其 IP 地址为 50.116.33.29；
+通过 `ping packagecontrol.io` 得到其 IP 地址为 50.116.34.243；
+
+执行 `sudo vi /etc/hosts`，在 hosts 中手动添加以下2行 DNS 解析：
+
+```Shell
+#to solve sublime Text IPv6
+50.116.33.29 sublime.wbond.net
+50.116.34.243 packagecontrol.io
+#end
+```
+
+执行 `sudo killall -HUP mDNSResponder` 使 hosts 生效。
+
+在弹出的 Channel JSON URL 底栏中输入 `https://wilon.github.io/static/channel_v3.json`，对应
 
 ### 插件卸载
 与安装方式对应，可以直接 `Browse Packages...` 到 `Packages` 或 `Installed Packages` 目录，手工移除对应插件的目录或 `*.sublime-package` 文件。

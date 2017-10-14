@@ -16,6 +16,8 @@ Theme - Seti Monokai
 dracula-theme-master
 ```
 
+> [2017 年最佳 Sublime Text 3 主题](http://www.css88.com/archives/7962)  
+
 ## Color Scheme
 通过菜单 `Preferences -> Color Scheme`，或者 `Command+Shift+P` 呼起命令面板输入 `UI: Select Color Scheme` 即可调出颜色主题选择列表。
 
@@ -103,17 +105,14 @@ Brogrammer is a flat sexy Sublime Text theme. Pushups not included.
 ### Sublime Text 3 3143
 淡色主题：
 
-- 3024 Day  
-- *Monokai Extended  Light*  
+- *Breakers*  
+- Agila Light Solarized  
 
 暗黑主题：
 
-- Mariana(灰蒙)  
 - Agila Cobalt(清灰)  
-- Agila Monokai Extended(轻灰)  
-- 3024 Night(暗黑)  
-- Brogrammer(暗黑)  
-- Agila Neon Monocyanide(暗黑)  
+- Monokai & Agila Monokai Extended(轻灰)  
+- *Agila Neon Monocyanide*(暗黑)：关键字黑体  
 
 ## Settings
 通过菜单或快捷键 `⌘,` 打开设置项进行编辑。
