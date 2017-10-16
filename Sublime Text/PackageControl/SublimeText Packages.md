@@ -48,7 +48,7 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 如果是其他插件（Vintage）禁用了，可以按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Enable Package` ，找到 disable 态的插件，点击选中即可重新 enable 插件。
 
 ## Package Install/Remove
-### Package 安装
+### 安装插件 Package
 插件的安装方法有两个：手动安装和通过插件管理器安装。
 
 #### 手动安装
@@ -62,8 +62,6 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 用 Package Control 安装插件的方法：
 
 按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Install` 或 `PCI` 查找到 `Package Control: Install Package`，选中点击将调出可安装的插件列表。
-
-![Command+Shift+P(Command_Palette)-PCI.png](images/Command+Shift+P(Command_Palette)-PCI.png)
 
 在搜索框中输入字符串可模糊匹配查找，例如输入 `Clickable` 搜索到 `Clickable URLs` 插件：
 
@@ -81,32 +79,73 @@ import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d
 >  
 > 按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，通过 `Package Control: List Packages` 命令可列出所有安装的插件。  
 
-#### 将 Package 创建 sublime-package
-按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Create Package File`  将列举出手动安装的插件（Unmanaged Packages），点击选中将创建。
+每次启动 Sublime Text 3，在控制台中可以看到 state path、zip path 及 packages path 信息：
 
-### 插件更新
-按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Upgrade Package` 执行更新插件。
+```Shell
+# sublime_session 目录
+state path: /Users/faner/Library/Application Support/Sublime Text 3/Local
+# APP 内置插件目录
+zip path: /Applications/Sublime Text.app/Contents/MacOS/Packages
+# 通过 Package Control 安装的插件（*.sublime-package）目录
+zip path: /Users/faner/Library/Application Support/Sublime Text 3/Installed Packages
+# 手动安装的插件目录
+packages path: /Users/faner/Library/Application Support/Sublime Text 3/Packages
+```
+
+#### 基于手动安装的 Package 创建 sublime-package
+按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Create Package File` 将列举出手动安装的插件（Unmanaged Packages），点击选中将创建。
+
+例如旧的 Package Control 插件控制器经常出现 missing 其他依赖导致自动添加到了配置文件  Preferences.sublime-settings — User 的 **ignored_packages** 中，导致未加载 Package Control 而无法使用插件管理器！
+
+我们可以去 [wbond](https://github.com/wbond)/[package_control](https://github.com/wbond/package_control) 下载最新的插件 ZIP 包，解压重命名为 `Package Control` 放置到 `~/Library/Application\ Support/Sublime\ Text\ 3/Packages` 目录下。然后在控制面板输入  `Package Control: Create Package File` 将 `Package Control` 文件夹打包为 `Package Control.sublime-package`。  
+关闭退出 Sublime Text 3，删除 `~/Library/Application\ Support/Sublime\ Text\ 3/Packages` 目录下的 `Package Control` 文件夹，将 `Package Control.sublime-package` 复制（覆盖）到 `~/Library/Application Support/Sublime Text 3/Installed Packages` 目录下，重启 Sublime Text 3 则可正常使用 Package Control 管理插件。  
+
+> 同一插件只能存在 `~/Library/Application\ Support/Sublime\ Text\ 3/Packages` 或  `~/Library/Application Support/Sublime Text 3/Installed Packages` 其一目录下，否则会报警告建议移除 Packages 下的手动安装插件。
+
+### [无法访问扩展插件安装源](https://www.zhihu.com/question/34386189)
+按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板：
+
+- 输入 `Package Control: Install Package`：查找安装插件；  
+- 输入 `Package Control: Upgrade Package`：更新已安装插件；  
+
+由于 `sublime.wbond.net` 和 `packagecontrol.io` 等[网站被墙](https://stackoverflow.com/questions/25105139/sublime-text-2-there-are-no-packages-available-for-installation)，导致[无法安装或更新插件](https://crowall.com/archives/sublime-text-can-not-install-plugins.html)。
+
+控制台输出报错1：
+
+```Shell
+Package Control: Error downloading channel. URL error [Errno 65] No route to host downloading https://packagecontrol.io/channel_v3.json
+```
+
+![Command+Shift+P(Command_Palette)-PCI.png](images/Command+Shift+P(Command_Palette)-PCI.png)
+
+控制台输出报错2：
+
+```Shell
+The handshake operation timed out downloading https://packagecontrol.io/channel_v3.json.
+```
+
+控制台输出报错3：
 
 ```Shell
 Package Control: Error downloading channel. URL error EOF occurred in violation of protocol (_ssl.c:548) downloading https://packagecontrol.io/channel_v3.json.
 Package Control: Error downloading channel. URL error _ssl.c:532: The handshake operation timed out downloading https://packagecontrol.io/channel_v3.json.
 ```
 
-通过 `ping sublime.wbond.net` 得到其 IP 地址为 50.116.33.29；
-通过 `ping packagecontrol.io` 得到其 IP 地址为 50.116.34.243；
+**解决方法**：增加可用安装源。
 
-执行 `sudo vi /etc/hosts`，在 hosts 中手动添加以下2行 DNS 解析：
+按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control: Add Channel`，在
+弹出的 Channel JSON URL 底栏中输入 `https://wilon.github.io/static/channel_v3.json`，该源url会被添加到插件配置文件 `~/Library/Application\ Support/Sublime\ Text 3/Packages/User/Package\ Control.sublime-settings` 的 "channels" 字典中：
 
 ```Shell
-#to solve sublime Text IPv6
-50.116.33.29 sublime.wbond.net
-50.116.34.243 packagecontrol.io
-#end
+	[
+		"https://wilon.github.io/static/channel_v3.json",
+		"https://packagecontrol.io/channel_v3.json"
+	],
 ```
 
-执行 `sudo killall -HUP mDNSResponder` 使 hosts 生效。
+命令面板，输入 `Package Control: Remove Channel` 可选择移除已添加的插件源 Channels。
 
-在弹出的 Channel JSON URL 底栏中输入 `https://wilon.github.io/static/channel_v3.json`，对应
+> 插件配置文件也可命令 `Preferences: Package Control Settings - User` 呼出。
 
 ### 插件卸载
 与安装方式对应，可以直接 `Browse Packages...` 到 `Packages` 或 `Installed Packages` 目录，手工移除对应插件的目录或 `*.sublime-package` 文件。
