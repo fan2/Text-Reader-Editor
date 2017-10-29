@@ -20,6 +20,9 @@ filetype indent on
 "语法高亮显示
 sy on "syntax
 
+"==============================================================================
+" // 命令历史记录配置
+"==============================================================================
 "记录历史的行数
 set history=1000
 
@@ -94,4 +97,24 @@ set is "incsearch
 "查找匹配高亮显示(hlsearch = hilight search) 
 "每次搜索完输入 :noh 可以清除高亮。
 set hls "hlsearch 
+
+"==============================================================================
+" // plugins
+"==============================================================================
+" // man-page viewer
+"查看方法输入:Man api_name
+source $VIMRUNTIME/ftplugin/man.vim
+"映射之后就可以少按一下 Shift 键。
+cmap man Man
+"在普通模式下按下 K （大写）即可启动 man 查看光标下的函数。
+nmap K :Man <cword><CR>
+
+" // pathogen
+"set nocp
+"syntax on
+"filetype plugin indent on
+
+set runtimepath+=~/.vim/autoload/pathogen.vim
+call pathogen#infect()
+call pathogen#helptags()
 
