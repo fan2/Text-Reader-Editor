@@ -33,7 +33,7 @@ specman.vim
 ```
 
 ## config & source
-在 vim 编辑器中输入 <kbd>:</kbd> 进入单行命令模式或按下 <kbd>Q</kbd>（<S-q>）进入 Ex 多行命令行模式，再依次输入 `:echo $VIM` 和 `:echo $VIMRUNTIME` 即可检查 vim 环境变量。
+在 vim 编辑器中输入 <kbd>:</kbd> 进入单行命令模式或按下 <kbd>Q</kbd>（`<S-q>`）进入 Ex 多行命令行模式，再依次输入 `:echo $VIM` 和 `:echo $VIMRUNTIME` 即可检查 vim 环境变量。
 
 ![$VIMRUNTIME](images/$VIMRUNTIME.png)
 
