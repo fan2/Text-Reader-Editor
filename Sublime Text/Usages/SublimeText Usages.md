@@ -1,30 +1,5 @@
 # [Sublime Text 3 文档](http://feliving.github.io/Sublime-Text-3-Documentation/)
 
-## References
-### 竞品对比
-[Vim 党的 Sublime Text/Atom/VS Code的抉择](http://www.jianshu.com/p/4d2a01c84d85)  
-[编辑器性能测试：Atom 、VS Code、Sublime Text](http://blog.jobbole.com/109756/)  
-
-### 入门指南
-[Sublime Text 2 强大的编辑功能](http://blog.csdn.net/qfatao/article/details/25131711)  
-[Sublime Text 2 - 性感无比的代码编辑器](http://www.iplaysoft.com/sublimetext.html)  
-[神级代码编辑器 Sublime Text 全程指南](http://www.cocoachina.com/programmer/20150715/12550.html)  
-[超级文本编辑器Sublime Text3](http://blog.csdn.net/enjoyyl/article/details/50057491)  
-[Sublime Text 3技巧：支持GB2312和GBK编码](http://blog.csdn.net/ubuntulover/article/details/21101979)  
-[Sublime Text 3 Markdown 写作设置](https://jdhao.github.io/2017/03/04/Sublime-Windows-Markdown/)
-
-### 使用技巧
-[Sublime Text代码编辑器-初学者不知道的那些事](http://article.yeeyan.org/view/165434/302716)  
-[Sublime Text 有哪些实用技巧？](http://www.zhihu.com/question/19976788)  
-[Sublime Text 有哪些使用技巧？](http://www.zhihu.com/question/24896283)  
-[12个不可不知的Sublime Text应用技巧和诀窍](http://segmentfault.com/a/1190000000505218)  
-[sublime text 3解放鼠标的快捷键总结](http://dengo.org/archives/970)  
-
-### 配置文件
-[Sublime Text 2 设置文件详解](http://linux.cn/article-799-1.html)  
-[sublime text 2 使用介绍（包括配置文件）](http://blog.csdn.net/tk86935367/article/details/8857840)  
-[Sublime Text 2/3 配置文件详解](http://www.imjeff.cn/blog/88/)
-
 ## File
 ### Open
 `File | Open...` 菜单支持选择打开 **文件夹**，这在阅读编辑一个文件夹下的代码时尤其有用。

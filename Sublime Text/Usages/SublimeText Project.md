@@ -1,6 +1,5 @@
 ## [打造自己的Sublime使用环境](http://www.codesec.net/view/165691.html)
 [如何优雅地使用Sublime Text 3](http://www.jianshu.com/p/3cb5c6f2421c)  
-[使用Sublime Text3+Ctags+Cscope替代Source Insight](https://www.zybuluo.com/lanxinyuchs/note/33551)  
 
 ## [Sublime Text : 创建工程](http://www.cnblogs.com/bluestorm/p/4768383.html)
 Sublime Text 可以很方便地管理多个工程。使用 Sublime Text 的Projects，可以将不同根目录的文件组织起来成为一个工程，而不用将所有的文件都放到一个根目录下面。
@@ -38,22 +37,3 @@ Sublime Text 的 `File | Open...` 菜单支持以文件夹为单位进行打开�
 PS：如果直接使用 Sublime Text 编辑 `*.sublime-project`，Sublime Text 会自动载入工程，建议使用别的文本编辑器编辑 `*.sublime-project`。
 
 在打开工程时，为避免与现开窗口已有文件混在一起，可以通过 File|New Window （Shift+Command+N）新建窗口，再在新建独立窗口中打开工程。
-
-## Clang
-SublimeClang - 支持自动补全，代码提示，静态检查，编译运行等简单功能。  
-GoSublime - 提供代码高亮、自动补全等功能  
-
-[配置 sublime 2 编译运行c++](http://blog.csdn.net/yankunhaha/article/details/14002967)  
-[Sublime Text2编译运行C++的配置](http://blog.csdn.net/ck_boss/article/details/22793033)  
-[Sublime Text2 编译和运行C/C++程序（windows）](http://www.cnblogs.com/akira90/archive/2013/01/02/2842571.html)  
-[Sublime Text 3直接编译执行C/C++程序](http://blog.csdn.net/shenwanjiang111/article/details/53728941)  
-[在Sublime Text 3上编译和运行java程序](http://blog.csdn.net/ksearch/article/details/20701495)  
-
-[Sublime Text 3 配置编译环境](http://www.jb51.net/softjc/180873.html)  
-
-## golang
-用 Sublime 开发 golang 的环境很简单，只需要安装一个 GoSublime 就差不多了。
-
-[Golang开发环境](http://www.jianshu.com/p/34fb92daab20)  
-[在sublime text 3中配置golang开发环境](http://sunbofu.blog.51cto.com/6431507/1546005/)  
-[Sublime Text3 + Golang搭建开发环境](http://blog.csdn.net/aqiang912/article/details/46775409)  
