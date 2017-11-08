@@ -1,3 +1,8 @@
+> [iOpener](https://github.com/rosshemsley/iOpener)  
+> [sublime_open_highlighted_path](https://github.com/sligodave/sublime_open_highlighted_path)  
+> [How to open file using only keyboard in Sublime Text?](https://superuser.com/questions/467693/how-to-open-file-using-only-keyboard-in-sublime-text)  
+> [Open files and folders with Sublime Text 3 from the OS X Terminal](http://envyandroid.com/sublime-text-open-files-from-terminal/)  
+
 # 在命令行中添加 subl 命令
 
 Sublime Text 拥有一个叫做 **subl** 的命令行工具，可以用来通过终端打开一个文件或者一整个文件夹。
