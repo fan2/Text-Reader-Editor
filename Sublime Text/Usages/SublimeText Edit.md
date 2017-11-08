@@ -1,3 +1,21 @@
+## File
+在控制面板中输入 `Copy` 可列出系统自带和插件支持的拷贝相关的操作。
+
+- Copy File Directory：拷贝目录  
+- Copy File Name：拷贝文件名  
+- Copy File Path：拷贝文件路径(目录/文件名)  
+
+> 在 tab 上右键上下文菜单中也有 Copy 相关的快捷操作。  
+> 在文件编辑区右键上下文菜单也有 `Copy File Path` 操作选项；`Reveal in Finder` 可快速定位到当前文件在 Finder 中的目录位置。  
+
+在控制面板中输入 `Insert` 可列出系统自带和插件支持的拷贝相关的操作。
+
+- Insert File Directory：在编辑点插入当前文件所在目录  
+- Insert File Name：在编辑点插入当前文件名称  
+- Insert File Path：在编辑点插入当前文件路径  
+
+> 在文件编辑区右键上下文菜单中的 `Path Tools` 展开二级菜单中可以看到以上 Copy 和 Insert 操作选项。  
+
 ## Line
 ### New Line
 `⌘↩`：在当前行下面新增一行然后跳至该行  
