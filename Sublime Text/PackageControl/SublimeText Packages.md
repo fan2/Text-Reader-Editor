@@ -158,7 +158,20 @@ Package Control: Error downloading channel. URL error _ssl.c:532: The handshake 
 [20 个强大的 Sublime Text 插件](http://www.oschina.net/translate/20-powerful-sublimetext-plugins)  
 [全栈开发必备的10款 Sublime Text 插件](http://www.cnblogs.com/lhb25/p/10-essential-sublime-text-plugins.html)  
 
-### [Clickable Urls](https://packagecontrol.io/packages/Clickable%20URLs)
+### [Wrap-Plus](https://packagecontrol.io/packages/Wrap%20Plus)
+[Sublime-Wrap-Plus](https://github.com/ehuss/Sublime-Wrap-Plus)
+
+### [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter)
+[facelessuser/BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
+
+[sublime text3下BracketHighlighter的配置方法](http://www.cnblogs.com/liu-l/p/3866458.html)
+
+Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `#!xml <tag></tag>`, and even custom brackets.
+
+该插件在 gutter 列显示匹配的区块括号。
+
+### Lines
+#### [Clickable Urls](https://packagecontrol.io/packages/Clickable%20URLs)
 [leonid-shevtsov/ClickableUrls_SublimeText](https://github.com/leonid-shevtsov/ClickableUrls_SublimeText)
 
 This plugin underlines URLs in Sublime Text, and lets you open them with a keystroke
@@ -166,16 +179,7 @@ This plugin underlines URLs in Sublime Text, and lets you open them with a keyst
 1. 将鼠标放置在超链接之上，使用快捷键 `option+command+enter`(`⌥⌘↩`) / `Ctrl+Alt+Enter` 即可在默认浏览器中网址。  
 2. 或双指单击右键，可以 Open %URL%。
 
-### [FileRename](https://packagecontrol.io/packages/File%20Rename)
-[brianlow/FileRename](https://github.com/brianlow/FileRename)
-
-Rename files from the ST3 command palette
-
-**To run**:
-
-`Ctrl-Shift-P` or `Command-Shift-P` then type `File:Rename` or `fr` for short.
-
-### [Filter Lines](https://packagecontrol.io/packages/Filter%20Lines)
+#### [Filter Lines](https://packagecontrol.io/packages/Filter%20Lines)
 [davidpeckham/sublime-filterlines](https://github.com/davidpeckham/sublime-filterlines)
 
 Quickly find all lines matching a string or regular expression
@@ -185,7 +189,9 @@ Quickly find all lines matching a string or regular expression
 - **Filter with Regex**：`⌘K ⌘R`  
 - **Filter with String**：`⌘K ⌘S`  
 
-### [Delete Blank Lines](https://packagecontrol.io/packages/DeleteBlankLines)
+另外，在控制面板中输入 **`Filter Lines: `** 也可列出该插件支持的可选操作。
+
+#### [Delete Blank Lines](https://packagecontrol.io/packages/DeleteBlankLines)
 [NicholasBuse/sublime_DeleteBlankLines](https://github.com/NicholasBuse/sublime_DeleteBlankLines)
 
 Deletes blank (or surplus blank) lines from a selection
@@ -197,15 +203,68 @@ Deletes blank (or surplus blank) lines from a selection
 - **Delete blank lines**：`^⌥Del`  
 - **Delete Surplus blank lines**：`⇧^⌥Del`  
 
-### [Wrap-Plus](https://packagecontrol.io/packages/Wrap%20Plus)
-[Sublime-Wrap-Plus](https://github.com/ehuss/Sublime-Wrap-Plus)
+另外，在控制面板中输入 **`Delet Blank Lines`** 也可列出该插件支持的可选操作。
 
-### [BracketHighlighter](https://packagecontrol.io/packages/BracketHighlighter)
-[facelessuser/BracketHighlighter](https://github.com/facelessuser/BracketHighlighter)
+### File
+#### [FileRename](https://packagecontrol.io/packages/File%20Rename)
+[brianlow/FileRename](https://github.com/brianlow/FileRename)
 
-[sublime text3下BracketHighlighter的配置方法](http://www.cnblogs.com/liu-l/p/3866458.html)
+Rename files from the ST3 command palette
 
-Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `#!xml <tag></tag>`, and even custom brackets.
+**To run**:
+
+`Ctrl-Shift-P` or `Command-Shift-P` then type **`File:Rename`** or `fr` for short.
+
+另外一种思路：`File | Open...` 菜单支持打开文件夹，在左侧边栏中右键文件，上下文菜单支持 Rename 重命名文件。
+
+> [Simple Way To Rename The Current File](http://www.sublimetext.com/forum/viewtopic.php?f=2&t=9534)  
+> [How to rename a file in Sublime Text 3?](http://stackoverflow.com/questions/19122581/how-to-rename-a-file-in-sublime-text-3)  
+
+#### [AdvancedNewFile](https://github.com/skuroda/Sublime-AdvancedNewFile)
+File creation plugin for Sublime Text 2 and Sublime Text 3.
+
+- `super+alt+n`(<kbd>⌘</kbd><kbd>⌥</kbd><kbd>n</kbd>): General keymap to create new files.  
+
+底栏出现 **Enter a path for a new file**：输入 `~/Downloads/testAdvancedNewFile.txt` 然后按下 <kbd>enter</kbd> 键，即可创建并打开文件 testAdvancedNewFile.txt。
+
+- `shift+super+alt+n`(<kbd>⇧</kbd><kbd>⌘</kbd><kbd>⌥</kbd><kbd>n</kbd>): In addition to creating the folders specified, new folders will also contain an __init__.py file.  
+
+这个好像快捷键和 File Navigator 的重合了？
+
+另外，在控制面板中输入 **`ANF: `** 也可列出该插件支持的可选操作：
+
+- ANF: New File  
+- ANF: Delete File  
+- ANF: Rename File  
+- ANF: Copy Current File  
+- ANF: Delete Current File  
+
+#### [File Navigator](https://github.com/csch0/SublimeText-File-Navigator)
+File Navigator plugin for Sublime Text
+
+Things you can do with this plugin are:
+
+- **create** new files and directories
+- **copy**/**move**/**paste** existing files/directories
+- **rename** existing files
+- **delete** existing files
+
+`super+shift+o`(<kbd>⇧</kbd><kbd>⌘</kbd><kbd>o</kbd>)：打开列表面板，展示当前所有打开文档所在的目录。
+
+![FileNavigator-1-Directories](images/FileNavigator-1-Directories.png)
+
+通过上下方向键移动聚焦目录，按下 <kbd>enter</kbd> 键可选中进入目录，列出目录下的文件。
+
+![FileNavigator-2-dirlist](images/FileNavigator-2-dirlist.png)
+
+选中 `..` 按下 <kbd>enter</kbd> 键进入上层目录。  
+按下  <kbd>tab</kbd>  键可在目录列表和目录操作之间切换。  
+
+![FileNavigator-3-tab-to-dirop](images/FileNavigator-3-tab-to-dirop.png)
+
+通过上下方向键移动聚焦文件，按下 <kbd>enter</kbd> 键选中文件 `C++-STL-Container.md`，然后列出可针对文件的操作项：
+
+![FileNavigator-4-choose-file](images/FileNavigator-4-choose-file.png)
 
 ### SideBar
 #### [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
