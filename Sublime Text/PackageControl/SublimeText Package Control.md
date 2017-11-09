@@ -113,8 +113,6 @@ Package Control: Error downloading channel. URL error _ssl.c:532: The handshake 
 ![3-Clickable_URLs-Installed.png](images/3-Clickable_URLs-Installed.png)
 
 > 有的网络环境可能会不允许访问陌生的网络环境从而设置防火墙，而 Sublime Text 貌似无法设置代理，则无法获取到安装包列表了。此时，只能通过手工安装。  
->  
-> 按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，通过 `Package Control: List Packages` 命令可列出所有安装的插件。  
 
 每次启动 Sublime Text 3，在控制台中可以看到 state path、zip path 及 packages path 信息：
 
@@ -138,8 +136,6 @@ packages path: /Users/faner/Library/Application Support/Sublime Text 3/Packages
 
 **注意**：有些插件需要重命名，具体请参考插件的 README 说明文档。
 
-> 按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板，输入 `Package Control:` 可查看相关操作命令。例如通过 `Package Control: List Unmanaged Packages` 命令可列出手动安装不受管理器管理的插件（No description provided\n unknown version）。
-
 可以使用 git 从 github 上 clone 插件包到 `Packages/` 目录，后面可以 rebase(fetch+merge) 更新插件。
 
 例如以下下载 Sublime-AdvancedNewFile 插件到 `Packages/AdvancedNewFile` 下。
@@ -158,6 +154,14 @@ faner@THOMASFAN-MB0:~/Library/Application Support/Sublime Text 3/Packages|
 关闭退出 Sublime Text 3，删除 `~/Library/Application\ Support/Sublime\ Text\ 3/Packages` 目录下的 `Package Control` 文件夹，将 `Package Control.sublime-package` 复制（覆盖）到 `~/Library/Application Support/Sublime Text 3/Installed Packages` 目录下，重启 Sublime Text 3 则可正常使用 Package Control 管理插件。  
 
 > 同一插件只能存在 `~/Library/Application\ Support/Sublime\ Text\ 3/Packages` 或  `~/Library/Application Support/Sublime Text 3/Installed Packages` 其一目录下，否则会报警告建议移除 Packages 下的手动安装插件。
+
+## 列举已安装的插件
+按下 `Command+Shift+P` / `Ctrl+Shift+P` 调出命令面板：
+
+- 点击 `Package Control: List Packages` 可列出所有已安装（包括手动和通过插件管理器安装）的插件。  
+- 点击 `Package Control: List Unmanaged Packages` 则只列出手动安装不受管理器管理的插件（No description provided\n unknown version）。  
+
+	> 点选某一插件，将定位到其安装目录：`~/Library/Application Support/Sublime Text 3/Installed Packages` 或 `~/Library/Application Support/Sublime Text 3/Packages`。
 
 # Package Remove
 与安装方式对应，可以直接 `Browse Packages...` 到 `Packages` 或 `Installed Packages` 目录，手工移除对应插件的目录或 `*.sublime-package` 文件。
