@@ -79,14 +79,46 @@ Checking connectivity... done.
 
 安装完插件后，一般还需执行 `:helptags ~/.vim/bundle/VOoM/doc/` 更新 help 标签库，这样即可通过 `:h voom.txt` 查看 voom 帮助。
 
----
+或者在 VIM 底行模式输入 `:Voomhelp` 将新建 tab 页打开 voom 帮助文档。
 
-使用 vim 打开 `002 - vim 初识.md` 文档，然后输入 `:Voom markdown` 即可左侧新建分屏窗口展示 markdown 文档大纲（TOC）。
+> Open help file voom.txt as an outline in a new tabpage. 
+
+![Voomhelp](images/Voomhelp.png)
+
+### OUTLINING MarkupMode
+
+[VOoM](https://vim-voom.github.io/) can work with headlines in the following formats:
+
+- Start fold markers with level numbers (:Voom). This is the default or "fmr" mode: headlines are lines with {{{1, {{{2, {{{3, etc. Start fold markers are determined by Vim option 'fmr'. There are also variations of this mode: fmr1, fmr2, fmr3.    
+- [MediaWiki](https://en.wikipedia.org/wiki/Help:Wiki_markup#Sections) (:Voom **wiki**).  
+- [Vimwiki](https://github.com/vimwiki/vimwiki) (:Voom vimwiki).  
+- [Emacs Org-mode](http://orgmode.org/) (:Voom **org**).  
+- [reStructuredText](http://docutils.sourceforge.net/rst.html) (:Voom **rest**).  
+- [Markdown](http://daringfireball.net/projects/markdown/) (:Voom **markdown**). Standard Markdown. Both Setext-style and Atx-style headers   are supported.  
+- [Pandoc Markdown](http://pandoc.org/) (:Voom **pandoc**). This screenshot shows Pandoc README. Headlines inside fenced code blocks are   ignored, which makes this mode suitable for MultiMarkdown, GitHub Markdown, Markdown R, etc.  
+- [LaTeX](http://en.wikipedia.org/wiki/LaTeX) (:Voom **latex**). This screenshot shows amshelp.tex.  
+- .dtx files (:Voom **latexDtx**). Documented LaTeX sources.  
+- [HTML heading tags](https://en.wikipedia.org/wiki/HTML_element#Basic_text) (:Voom html). Single lines only.  
+- [The Vim Outliner](http://www.vim.org/scripts/script.php?script_id=517) (:Voom thevimoutliner).  
+- [VimOutliner](https://github.com/vimoutliner/vimoutliner) (:Voom vimoutliner).  
+- [TaskPaper](http://www.vim.org/scripts/script.php?script_id=2027) (:Voom taskpaper).  
+- [Python](https://www.python.org/) code (:Voom **python**). Like a class browser, but regions between "class" and "def" are also nodes.  
+
+执行 `:h vimrc` 打开 vim 标准 wiki 文档（`/usr/share/vim/vim[0-9][0-9]/doc/starting.txt`），输入 `:Voom wiki`（或 `:Voom vimwiki`） 即可在左侧新建分屏窗口展示 wiki 文档大纲（TOC）。
+
+![Voom_wiki](images/Voom_wiki.png)
+
+使用 vim 打开 `002 - vim 初识.md` 文档，输入 `:Voom markdown` 即可在左侧新建分屏窗口展示 markdown 文档大纲（TOC）。  
 
 ![Voom_markdown](images/Voom_markdown.png)
 
 通过上下方向键可以切换阅读指定章节，或通过 <kbd>j</kbd>、<kbd>k</kbd> 再配合 <kbd>enter</kbd> 键切换阅读指定章节。  
 通过快捷键 `CTRL-W_h` 或 `CTRL-W_l` 可在左侧TOC窗格和右侧正文窗格之间切换，输入 `:q` 退出当前窗口。  
+
+### 其他类似插件
+[TVO: The Vim Outliner ](http://www.vim.org/scripts/script.php?script_id=517) - old 2006  
+[VimOutliner](http://www.vim.org/scripts/script.php?script_id=3515) @[github](https://github.com/vimoutliner/vimoutliner)  
+[VimFlowy: The Simplest Outliner for VIM](https://rogerkeays.com/vimflowy)  
 
 ## references
 [Vim下的插件管理工具pathogen简介](http://www.cnblogs.com/litifeng/p/5597565.html)  
