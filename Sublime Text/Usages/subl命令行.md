@@ -3,6 +3,8 @@
 > [How to open file using only keyboard in Sublime Text?](https://superuser.com/questions/467693/how-to-open-file-using-only-keyboard-in-sublime-text)  
 > [Open files and folders with Sublime Text 3 from the OS X Terminal](http://envyandroid.com/sublime-text-open-files-from-terminal/)  
 
+Sublime Text [Command Line Usage](http://docs.sublimetext.info/en/latest/command_line/command_line.html)
+
 # 在命令行中添加 subl 命令
 
 Sublime Text 拥有一个叫做 **subl** 的命令行工具，可以用来通过终端打开一个文件或者一整个文件夹。

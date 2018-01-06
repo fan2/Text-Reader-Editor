@@ -52,6 +52,16 @@ Deletes blank (or surplus blank) lines from a selection
 
 另外，在控制面板中输入 **`Delet Blank Lines`** 也可列出该插件支持的可选操作。
 
+### [Incrementor](https://packagecontrol.io/packages/Incrementor)
+[Incrementor for ST2](https://github.com/eBookArchitects/Incrementor) / [Incrementor for ST3](https://github.com/born2c0de/Incrementor)  
+
+[Increment Selection](https://packagecontrol.io/packages/Increment%20Selection)
+
+> [How to insert a column of increasing numbers in Sublime Text 2?](https://stackoverflow.com/questions/14640093/how-to-insert-a-column-of-increasing-numbers-in-sublime-text-2)  
+> [HOW TO ADD AN AUTO INCREMENTING NUMBER TO EACH SELECTION IN SUBLIME TEXT 3](http://rricketts.com/add-auto-incrementing-number-selection-sublime-text-3/)  
+
+列选将光标置于每一行行首，然后按下 `^⌥i` 即可在每行列首插入 1234... 序号。
+
 ## File
 ### [FileRename](https://packagecontrol.io/packages/File%20Rename)
 [brianlow/FileRename](https://github.com/brianlow/FileRename)

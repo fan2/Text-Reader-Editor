@@ -1,5 +1,7 @@
 # [Sublime Text 3 文档](http://feliving.github.io/Sublime-Text-3-Documentation/)
 
+官方帮助文档：<http://docs.sublimetext.info/en/latest/>
+
 ## File
 ### Open
 `File | Open...` 菜单支持选择打开 **文件夹**，这在阅读编辑一个文件夹下的代码时尤其有用。
@@ -7,6 +9,8 @@
 使用 `⌘P` 调出文件跳转搜索列表框，可快速切换当前文件夹下的文件。
 
 ## View
+[File Navigation](http://docs.sublimetext.info/en/latest/file_management/file_navigation.html)  
+
 ### SideBar
 `⌘+K+B`：开/关 侧边栏
 

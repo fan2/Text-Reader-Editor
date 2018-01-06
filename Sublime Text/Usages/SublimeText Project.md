@@ -2,7 +2,8 @@
 [如何优雅地使用Sublime Text 3](http://www.jianshu.com/p/3cb5c6f2421c)  
 
 ## [Sublime Text : 创建工程](http://www.cnblogs.com/bluestorm/p/4768383.html)
-Sublime Text 可以很方便地管理多个工程。使用 Sublime Text 的Projects，可以将不同根目录的文件组织起来成为一个工程，而不用将所有的文件都放到一个根目录下面。
+Sublime Text 可以很方便地管理多个工程。
+使用 Sublime Text 的 [Projects](http://docs.sublimetext.info/en/latest/file_management/projects.html)，可以将不同根目录的文件组织起来成为一个工程，而不用将所有的文件都放到一个根目录下面。
 
 ## 文件夹（Folders）
 Sublime Text 的 `File | Open...` 菜单支持以文件夹为单位进行打开编辑，这在编辑一个文件夹下的代码时尤其有用。

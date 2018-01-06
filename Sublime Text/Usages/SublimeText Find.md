@@ -1,3 +1,5 @@
+帮助文档：[Search and Replace](http://docs.sublimetext.info/en/sublime-text-3/search_and_replace/search_and_replace_overview.html)
+
 ## Quick Find
 鼠标双击选中当前光标所在位置的单词(word)：
 

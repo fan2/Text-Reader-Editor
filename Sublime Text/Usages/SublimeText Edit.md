@@ -1,3 +1,5 @@
+参考文档：[File Navigation](http://docs.sublimetext.info/en/latest/file_management/file_navigation.html) | [Goto Anything](http://docs.sublimetext.info/en/latest/file_management/file_navigation.html#goto-anything)
+
 ## File
 在控制面板中输入 `Copy` 可列出系统自带和插件支持的拷贝相关的操作。
 
@@ -40,6 +42,12 @@
 ## Jumping（Go to）
 ### 跳转到行
 `^G`：调出行跳转搜索列表框，输入行号可跳转到指定行。
+
+在底部 [Console](http://docs.sublimetext.info/en/sublime-text-3/extensibility/commands.html) 中输入以下命名可跳转到第10行：
+
+```python
+view.run_command("goto_line", {"line": 10})
+```
 
 ### 通用跳转
 `⌘P`：调出文件跳转搜索列表框，会列出当前打开的文件（或者是当前打开的文件夹下的文件），输入文件名然后 Enter，或者通过上下方向键（↑↓）切换到文件。
