@@ -63,6 +63,41 @@ Deletes blank (or surplus blank) lines from a selection
 列选将光标置于每一行行首，然后按下 `^⌥i` 即可在每行列首插入 1234... 序号。
 
 ## File
+### [HexViewer](https://packagecontrol.io/packages/HexViewer)
+[HexViewer Documentation](http://facelessuser.github.io/HexViewer/)  
+
+HexViewer is a plugin for Sublime Text that allows the toggling of a file into a hex viewing mode.   HexViewer also supports limited hex editing.
+
+View any file (that exist on disk) in a hex format showing both byte and ASCII representation.
+
+通过控制面板（command palette）执行 `HexViewer: Toggle Hex View` 即可开启十六进制查看模式，再次执行即可关闭。
+
+![HexViewer](images/HexViewer.png)
+
+- Command to jump to a specific address
+
+> 在十六进制模式执行 `HexViewer: Go to Offset` 即可跳转到指定偏移地址。
+
+- In place editing of bytes or ASCII chars
+
+> 在十六进制模式执行 `HexViewer: Show Hex Edit Panel` 即可编辑光标所在位置的字节值。
+
+- HexViewer: Set Bytes Per Line
+
+> 默认配置（`~/Library/Application Support/Sublime Text 3/Packages/HexViewer/hex_viewer.sublime-settings`）一行显示24个字节（"bytes_per_line" : 24）  
+>> 可在 `~/Library/Application Support/Sublime Text 3/Packages/User/hex_viewer.sublime-settings` 中配置为16。  
+
+- HexViewer: Set Bits Per Group
+
+> 默认配置（`~/Library/Application Support/Sublime Text 3/Packages/HexViewer/hex_viewer.sublime-settings`）两个字节为一组（ "group_bytes_by_bits" : 16 ）  
+>>  可在 `~/Library/Application Support/Sublime Text 3/Packages/User/hex_viewer.sublime-settings` 中配置为8。  
+
+---
+
+Linux/Unix（macOS）的命令行工具 od(octal dump)/hexdump 可指定（十六）进制输出：
+
+![hexdump](images/hexdump.png)
+
 ### [FileRename](https://packagecontrol.io/packages/File%20Rename)
 [brianlow/FileRename](https://github.com/brianlow/FileRename)
 

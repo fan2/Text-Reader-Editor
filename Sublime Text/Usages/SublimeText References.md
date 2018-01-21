@@ -21,7 +21,8 @@
 ## 配置文件
 [Sublime Text 2 设置文件详解](http://linux.cn/article-799-1.html)  
 [sublime text 2 使用介绍（包括配置文件）](http://blog.csdn.net/tk86935367/article/details/8857840)  
-[Sublime Text 2/3 配置文件详解](http://www.imjeff.cn/blog/88/)
+[Sublime Text 2/3 配置文件详解](http://www.imjeff.cn/blog/88/)  
+[Sublime Text 3 配置分析与我的配置](http://blog.csdn.net/hexrain/article/details/13997565)  
 
 ## IDE
 ### ctags+cscope
