@@ -3,13 +3,19 @@
 官方帮助文档：<http://docs.sublimetext.info/en/latest/>
 
 ## File
+
+在 Command Palette 中输入 ***`File: `*** 可查看文件相关的操作。
+
 ### Open
 `File | Open...` 菜单支持选择打开 **文件夹**，这在阅读编辑一个文件夹下的代码时尤其有用。
 
 使用 `⌘P` 调出文件跳转搜索列表框，可快速切换当前文件夹下的文件。
 
 ## View
+
 [File Navigation](http://docs.sublimetext.info/en/latest/file_management/file_navigation.html)  
+
+在 Command Palette 中输入 ***`View: `*** 可查看文件相关的操作。
 
 ### SideBar
 `⌘+K+B`：开/关 侧边栏
@@ -46,19 +52,25 @@ Hide MiniMap：关闭迷你地图。
 > Set Syntax: Plain Text —— 纯文本  
 > Set Syntax: Markdown —— Markdown
 
-### Indentation
-Indent Using Spaces：默认设置4个空格填充 tab。tab width：4。
+### layout
 
-### Line Endings
+#### Indentation
+Indent Using Spaces：默认设置4个空格填充 tab。
+
+tab width：4。
+
+#### Line Endings
 句末换行符，默认为 Unix 风格。
 
-### Word Wrap
+#### Word Wrap
 自动换行：点击选中，默认的 Word Wrap Column 为 Automatic，根据窗口宽度折行。
 
 [Quick Tip: Enable Sublime Text Word Wrap](http://justinseeley.com/tutorials/quick-tip-enable-sublime-text-word-wrap/)
 
-### ruler
+#### ruler
 Column Guide Margin：80
+
+### [HexViewer](https://packagecontrol.io/packages/HexViewer) 插件
 
 ## Selection
 Add Previous Line：Ctrl+Alt+Up，向上竖（列）选  
@@ -74,6 +86,7 @@ Windows Sublime Text：
 - 从选区移除: Alt  
 
 ## Find
+
 ### 调出查找底栏
 
 - Find：Ctrl+F，底栏可点击 `Find All` 查找所有。  
@@ -82,6 +95,7 @@ Windows Sublime Text：
 - Incremental Find：Ctrl+I  
 
 ### 快速查找
+
 基于上下文快速查找**当前光标**所在单词：
 
 Quick Find：`⌥⌘G` / `Ctrl+F3`（Shift 反向向上查找）。  
@@ -94,8 +108,16 @@ Find All 之后，`⌘L` / `Ctrl+L`（Expand Selection to Line），选中所有
 
 使用 [davidpeckham/sublime-filterlines](https://github.com/davidpeckham/sublime-filterlines) 插件可查找筛选出所有包含关键词的行。
 
+### IFS（Instant File Search）
+
+在 Command Palette 中输入 **`File: Search Files`** 可打开新tab页，支持输入关键词查找名称匹配的文件（In Paths Containing），立即显示搜索结果。
+
+### [Filter Lines](https://packagecontrol.io/packages/Filter%20Lines) 插件
+
 ## Preferences
+
 ### Color Theme
+
 #### 深色系
 
 - Amy：   紫红色
@@ -104,5 +126,6 @@ Find All 之后，`⌘L` / `Ctrl+L`（Expand Selection to Line），选中所有
 - Solarized：Light/Dark
 
 #### 浅色系
+
 - Dawn：白色
 - **Slush & Popies**：白色(推荐)

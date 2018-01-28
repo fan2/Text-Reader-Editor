@@ -12,13 +12,13 @@ Sublime Text 的 `File | Open...` 菜单支持以文件夹为单位进行打开�
 
 ### 创建工程
 
-	Project > Add Folder to Project
+    Project > Add Folder to Project
 
 这时在 sidebar 中将出现刚刚添加的文件目录，如果还需要添加其他目录，则重复这一操作即可。
 
 ### 保存工程
 
-	Project > Save Project As
+    Project > Save Project As
 
 点击保存后Sublime Text将自动生成两个文件：
 
