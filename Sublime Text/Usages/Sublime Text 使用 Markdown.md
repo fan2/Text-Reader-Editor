@@ -20,3 +20,11 @@
     ⌘+⌥+O: Preview Markup in Browser.
     ⌘+⌥+X: Export Markup as HTML.
     Ctrl+Alt+C: Copy Markup as HTML.
+
+## Marked App Menu
+
+[sublime-text-marked](https://github.com/icio/sublime-text-marked)
+
+Sublime Text 2/3 - Marked App Menu plugin
+
+安装后，通过 `Tools | Marked` 菜单或 `Command Palette: Marked` 调起 Marked(2).app 打开渲染当前 markdown 文档。
