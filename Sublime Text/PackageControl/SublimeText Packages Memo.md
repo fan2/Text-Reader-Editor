@@ -5,6 +5,7 @@
 [全栈开发必备的10款 Sublime Text 插件](http://www.cnblogs.com/lhb25/p/10-essential-sublime-text-plugins.html)  
 
 ## format & layout
+
 ### [Wrap-Plus](https://packagecontrol.io/packages/Wrap%20Plus)
 [Sublime-Wrap-Plus](https://github.com/ehuss/Sublime-Wrap-Plus)
 
@@ -18,6 +19,7 @@ Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""
 该插件在 gutter 列显示匹配的区块括号。
 
 ## Lines
+
 ### [Clickable Urls](https://packagecontrol.io/packages/Clickable%20URLs)
 [leonid-shevtsov/ClickableUrls_SublimeText](https://github.com/leonid-shevtsov/ClickableUrls_SublimeText)
 
@@ -27,6 +29,7 @@ This plugin underlines URLs in Sublime Text, and lets you open them with a keyst
 2. 或双指单击右键，可以 Open %URL%。
 
 ### [Filter Lines](https://packagecontrol.io/packages/Filter%20Lines)
+
 [davidpeckham/sublime-filterlines](https://github.com/davidpeckham/sublime-filterlines)
 
 Quickly find all lines matching a string or regular expression
@@ -63,6 +66,7 @@ Deletes blank (or surplus blank) lines from a selection
 列选将光标置于每一行行首，然后按下 `^⌥i` 即可在每行列首插入 1234... 序号。
 
 ## File
+
 ### [HexViewer](https://packagecontrol.io/packages/HexViewer)
 [HexViewer Documentation](http://facelessuser.github.io/HexViewer/)  
 
@@ -99,6 +103,7 @@ Linux/Unix（macOS）的命令行工具 od(octal dump)/hexdump 可指定（十�
 ![hexdump](images/hexdump.png)
 
 ### [FileRename](https://packagecontrol.io/packages/File%20Rename)
+
 [brianlow/FileRename](https://github.com/brianlow/FileRename)
 
 Rename files from the ST3 command palette
@@ -159,6 +164,7 @@ Things you can do with this plugin are:
 ![FileNavigator-4-choose-file](images/FileNavigator-4-choose-file.png)
 
 ## SideBar
+
 ### [SideBarEnhancements](https://packagecontrol.io/packages/SideBarEnhancements)
 [titoBouzout/SideBarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
 
@@ -282,3 +288,11 @@ A Sublime Text 3 plugin to preview your markdown as you type
 MarkdownTOC(Table Of Contents) Plugin for Sublime Text
 
 菜单 `Tools|MarkdownTOC` 下有两项：Insert TOC，Update TOC。
+
+### Marked App Menu
+
+[sublime-text-marked](https://github.com/icio/sublime-text-marked)
+
+Sublime Text 2/3 - Marked App Menu plugin
+
+安装后，通过 `Tools | Marked` 菜单或 `Command Palette: Marked` 调起 Marked(2).app 打开渲染当前 markdown 文档。
