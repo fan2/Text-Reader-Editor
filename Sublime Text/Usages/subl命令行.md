@@ -68,3 +68,20 @@ faner@THOMASFAN-MB0:~|⇒  subl Downloads/man.vim
 ```
 
 当然，也可输入 `subl dir` 打开文件夹。
+
+## sublime.plugin.zsh
+[关于 oh-my-zsh 插件的使用（以 Sublime Text 为例）](http://www.cnblogs.com/memory4young/p/about-oh-my-zsh-plugin-sublime.html)
+
+zsh 的插件目录为 `~/.oh-my-zsh/plugins/`，可打开查看其下的插件列表。
+
+```shell
+faner@MBP-FAN:~/.oh-my-zsh/plugins/sublime|master 
+⇒  ls
+README.md          sublime.plugin.zsh
+```
+
+在终端执行 `vim ~/.zshrc` 打开 zsh 配置文件，找到 `plugins=(git)` 这一行，将其修改为 `plugins=(git sublime)` 以启用 sublime 插件。
+
+启用 sublime 插件后，在 zsh 终端命令行直接输入 **`st`** 命令启动 Sublime Text，后可接文件名和文件夹；**`stt`** 命令相当于 `st .`，在 Sublime Text 中打开当前目录。
+
+> 详情可参考 ~/.oh-my-zsh/plugins/sublime/README.md 文件。
