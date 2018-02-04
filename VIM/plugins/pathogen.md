@@ -120,6 +120,42 @@ Checking connectivity... done.
 [VimOutliner](http://www.vim.org/scripts/script.php?script_id=3515) @[github](https://github.com/vimoutliner/vimoutliner)  
 [VimFlowy: The Simplest Outliner for VIM](https://rogerkeays.com/vimflowy)  
 
+## 安装 vim-marked 插件
+克隆 [vim-marked](https://github.com/itspriddle/vim-marked) 插件的 github repo 到 `~/.vim/bundle/` 目录下：
+
+```shell
+faner@MBP-FAN:~|⇒  cd ~/.vim/bundle/ && git clone https://github.com/itspriddle/vim-marked.git
+Cloning into 'vim-marked'...
+remote: Counting objects: 130, done.
+remote: Total 130 (delta 0), reused 0 (delta 0), pack-reused 130
+Receiving objects: 100% (130/130), 18.15 KiB | 0 bytes/s, done.
+Resolving deltas: 100% (31/31), done.
+Checking connectivity... done.
+faner@MBP-FAN:~/.vim/bundle|⇒  ls
+VOoM       vim-marked
+faner@MBP-FAN:~/.vim/bundle|⇒  cd vim-marked 
+faner@MBP-FAN:~/.vim/bundle/vim-marked|master 
+⇒  ls
+README.markdown doc             plugin
+
+```
+
+使用说明（Usage）：
+
+```shell
+:MarkedOpen[!]          Open the current Markdown buffer in Marked. Call with
+                        a bang to prevent Marked from stealing focus from Vim.
+                        Documents opened in Marked are tracked and closed
+                        automatically when you quit Vim.
+
+:MarkedQuit             Close the current Markdown buffer in Marked. Quits
+                        Marked if there are no other documents open.
+
+:MarkedToggle[!]        If the current Markdown buffer is already open in
+                        Marked, calls :MarkedQuit. If not, calls
+                        :MarkedOpen[!].
+```
+
 ## references
 [Vim下的插件管理工具pathogen简介](http://www.cnblogs.com/litifeng/p/5597565.html)  
 [vim插件管理利器：pathogen](http://blog.csdn.net/zhaoyw2008/article/details/8012757)  
