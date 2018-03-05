@@ -1,6 +1,7 @@
 参考文档：[File Navigation](http://docs.sublimetext.info/en/latest/file_management/file_navigation.html) | [Goto Anything](http://docs.sublimetext.info/en/latest/file_management/file_navigation.html#goto-anything)
 
 ## File
+在 Command Palette 中输入 ***`File: `*** 可查看文件相关的操作。
 
 ### Copy
 在控制面板中输入 **`Copy`** 可列出系统自带和插件支持的拷贝相关的操作。
@@ -24,13 +25,20 @@
 ### [FileRename](https://packagecontrol.io/packages/File%20Rename) 插件
 File: Rename
 
+弹窗输入新名称（Prompt for New Name）。
+
 ### [AdvancedNewFile](https://github.com/skuroda/Sublime-AdvancedNewFile) 插件
 
 - ANF: New File  
+	> Prompt: Enter a path for new file  
 - ANF: Delete File  
+	> Prompt: Enter path of file to delete  
 - ANF: Rename File  
+	> Prompt: Enter a new path for current file  
 - ANF: Copy Current File  
+	> Prompt: Enter a new path to copy file  
 - ANF: Delete Current File  
+	> Alert: confirm  
 
 ### [File Navigator](https://github.com/csch0/SublimeText-File-Navigator) 插件
 
