@@ -116,6 +116,21 @@ Package Control: Error downloading channel. URL error _ssl.c:532: The handshake 
 
 > 也可以调出命令面板，输入 `Preferences: Package Control Settings - Default(or User)` 打开 Package Control 的默认/用户配置文件，在 json 文件中直接编辑 Channels 字典。
 
+---
+
+如果 github.io 被墙了，还有一种方案：从 github 搜索一份最新的 [`channel_v3.json`](https://github.com/teayz/channel_v3.json) 文件，下载到本地再将本地绝对路径添加到 channels 中：
+
+```json
+	"channels":
+	[
+		"/Users/faner/Projects/SublimeText/channel_v3.json",
+		"https://wilon.github.io/static/channel_v3.json",
+		"https://packagecontrol.io/channel_v3.json"
+	],
+```
+
+> 当然，也可搭建本地 HTTP 服务，设置诸如 `http://127.0.0.1/document/channel_v3.json` 此类路径。
+
 ### 设置代理
 Package Control 的默认配置文件 `Package Control Settings - Default`（`~/Library/Application Support/Sublime Text 3/Packages/Package Control/Package Control.sublime-settings`）中定义了 http_proxy 和 https_proxy 均为空：
 
