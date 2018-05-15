@@ -10,11 +10,29 @@
 
 `Terminal`: Launch terminals from the current file or the root project folder.
 
-> 在 Sublime Text 直接打开命令行
+在 Sublime Text 直接打开命令行，Command Palette 输入 `Terminal` 调出：
 
-`Terminal View`: Terminal inside Sublime Text 3 View
+1. **Terminal**: Open（`⇧⌘T`）  
+2. **Terminal**: Open in project folder（`⌥⇧⌘T`）  
 
-`Terminal in Packages`: Sublime text plugin for opening a terminal in the packages directory.
+默认打开 macOS 系统终端。
+
+若要打开 iTerm2，则需要打开配置 `Preferences: Terminal Settings - User`：
+
+```json
+{
+    "terminal": "iTerm2-v3.sh",
+    "parameters": ["--open-in-tab"]
+}
+```
+
+> [How to open the iTerm in the sublime text 3?](https://stackoverflow.com/questions/38939557/how-to-open-the-iterm-in-the-sublime-text-3)  
+> [给 Sublime Text 3 添加终端支持](https://www.linpx.com/p/add-terminal-support-to-sublime-text-3.html)  
+
+其他同类插件：
+
+- [`Terminal View`](https://forum.sublimetext.com/t/terminalview-terminal-inside-st3-view-linux-macos-only/28605): Terminal inside Sublime Text 3 View  
+- `Terminal in Packages`: Sublime text plugin for opening a terminal in the packages directory.  
 
 ## format & layout
 
@@ -29,6 +47,37 @@
 Bracket Highlighter matches a variety of brackets such as: `[]`, `()`, `{}`, `""`, `''`, `#!xml <tag></tag>`, and even custom brackets.
 
 该插件在 gutter 列显示匹配的区块括号。
+
+### [AlignTab](https://github.com/randy3k/aligntab)
+
+An alignment plugin for Sublime Text using regular expression
+
+PCI 已搜索安装 **AlignTab**，用于列对齐。
+
+[sublime text 的 AlignTab 插件如何使用？](https://www.zhihu.com/question/40664935)
+
+在 `Preferences: Key Bindings` 中设置快捷键：
+
+```json
+    {
+        "keys": ["control+alt+;"], "command": "align_tab",
+        "args" : {
+          "user_input" : ":/f"
+        }
+    },
+    {
+        "keys": ["control+alt+="], "command": "align_tab",
+        "args" : {
+          "user_input" : "=/f"
+        }
+    },
+    {
+        "keys": ["control+alt+."], "command": "align_tab",
+        "args" : {
+          "user_input" : "=>/f"
+        }
+    }
+```
 
 ## Lines
 
@@ -178,6 +227,8 @@ Things you can do with this plugin are:
 ### AutoFileName
 
 快速列出想要引用的文件夹里所有文件的名字，自动完成文件名的输入，如图片选取。
+
+[sublime 文件路径提示功能（安装方法）](https://blog.csdn.net/github_37360787/article/details/54615514)  
 
 ## SideBar
 
