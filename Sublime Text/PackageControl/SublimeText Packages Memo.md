@@ -4,6 +4,18 @@
 [20 个强大的 Sublime Text 插件](http://www.oschina.net/translate/20-powerful-sublimetext-plugins)  
 [全栈开发必备的10款 Sublime Text 插件](http://www.cnblogs.com/lhb25/p/10-essential-sublime-text-plugins.html)  
 
+## interface
+
+### Terminal
+
+`Terminal`: Launch terminals from the current file or the root project folder.
+
+> 在 Sublime Text 直接打开命令行
+
+`Terminal View`: Terminal inside Sublime Text 3 View
+
+`Terminal in Packages`: Sublime text plugin for opening a terminal in the packages directory.
+
 ## format & layout
 
 ### [Wrap-Plus](https://packagecontrol.io/packages/Wrap%20Plus)
@@ -162,6 +174,10 @@ Things you can do with this plugin are:
 通过上下方向键移动聚焦文件，按下 <kbd>enter</kbd> 键选中文件 `C++-STL-Container.md`，然后列出可针对文件的操作项：
 
 ![FileNavigator-4-choose-file](images/FileNavigator-4-choose-file.png)
+
+### AutoFileName
+
+快速列出想要引用的文件夹里所有文件的名字，自动完成文件名的输入，如图片选取。
 
 ## SideBar
 

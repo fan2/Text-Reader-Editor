@@ -48,3 +48,8 @@ PS：如果直接使用 Sublime Text 编辑 `*.sublime-project`，Sublime Text �
 鼠标单击侧边栏文件夹（FOLDERS）下的某个文件，只会以一个 tab 以只读模式打开查看，标题为斜体。  
 当光标输入 a、i、o 编辑插入时，或在侧边栏双击某个文件，则该文件将自动在新建的 OPEN FILES 分组中打开。
 如果开启了 outline，则 outline 放到 GROUP 1，所有已打开文件放到 GROUP 2 中。
+
+#### 来回切换
+
+`^-`：Goto | Jump Back，跳转到上一个（文件）编辑点  
+`^⇧-`：Goto | Jump Forward，跳转到下一个（文件）编辑点  
