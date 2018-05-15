@@ -1,12 +1,6 @@
 [SublimeLinter](https://github.com/SublimeLinter) - The code linting framework for Sublime Text 3  
 [SublimeLinter](https://github.com/SublimeLinter/SublimeLinter) Framework  
 
-## common
-
-PCI 已搜索安装 **Alignment**: 赋值语句的 `=` 对齐。
-
-> 相关插件：Align​Tab
-
 ## Shell
 
 [SublimeBashTidy](https://github.com/joysboy/SublimeBashTidy)  

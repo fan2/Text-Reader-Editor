@@ -23,13 +23,16 @@ PCI 搜索安装 **`HTML-CSS-JS Prettify`**
 
 ## CSS
 
-### CSS3
+### [CSS3](https://github.com/y0ssar1an/CSS3)
 
-CSS3 语法高亮
+The most complete CSS support for Sublime Text 3
 
 默认安装的 Sublime Text 对 CSS3 的支持让人抓狂，帧动画？别开玩笑了，你只会看到一片白色的纯文本一样的代码。
 
-建议用 CSS3 Package 完全替代原来的 CSS Package 来完成语法高亮。
+PCI 已搜索安装 `CSS3`，然后替代自带的 `CSS`：
+
+1. 在 `Package Control: Disable Package -> CSS` 中禁用自带的 CSS Package；  
+2. 打开任意 CSS 文件，选择 `View -> Syntax -> Open all with current extension as... -> CSS3`，使用 CSS3 替代 CSS 完成语法高亮。
 
 ### [**Sublime-CSS-Format**](https://github.com/mutian/Sublime-CSS-Format)  
 
@@ -61,25 +64,46 @@ WARNING:SublimeLinter.plugin.stylelint:Stylelint crashed: No configuration provi
 1. `npm install -g csslint` 安装 csslint - npm；  
 2. PCI 搜索安装 `SublimeLinter-csslint`。
 
-### Color Highlighter
+### [LESS](https://packagecontrol.io/packages/LESS)
 
-CSS 颜色高亮
+LESS syntax highlighting for Sublime Text
+
+PCI 已搜索安装 LESS。
+
+[Sublime Text3 支持Less](https://blog.csdn.net/XIAOZHUXMEN/article/details/51305659) @[cnblogs](https://www.cnblogs.com/liuzhibin/p/6228293.html)  
+
+### [Color Highlighter](https://github.com/Monnoroch/ColorHighlighter)
 
 Color Highlighter 插件会检测 CSS 文件中的颜色码，不论是 Hex 码或者 RGB 码都能很好的显示对应的颜色。
 
+PCI 已搜索安装 Color Highlighter。
+
 ## JavaScript
 
-### JavaScript Next
+### [JavaScript Next](https://github.com/Benvie/JavaScriptNext.tmLanguage)
+
+PCI 已搜索安装 [JavaScript Next - ES6 Syntax](https://packagecontrol.io/packages/JavaScriptNext%20-%20ES6%20Syntax)  
 
 JavaScript Next 提供了比默认 JavaScript Package 更好的语法高亮，而且完美支持 ECMAScript 6。
 
-建议完全使用 JavaScript Next 代替 JavaScript Package。
+PCI 已搜索安装 `JavaScript Next`，然后替代自带的 JavaScript：
+
+1. 在 `Package Control: Disable Package -> JavaScript` 中禁用自带的 JavaScript Package；  
+2. 打开任意 js 文件，选择 `View -> Syntax -> Open all with current extension as... -> Javascript Next`，使用 JavaScript Next 替代 JavaScript 完成语法高亮。
+
+[Configuring Sublime Text 3 for Modern ES6 JS Projects](https://medium.com/@nicklee1/configuring-sublime-text-3-for-modern-es6-js-projects-6f3fd69e95de)  
+
+[在 Sublime Text 上配置 ES2015 开发环境](https://morning.work/page/2016-03/sublime-text-for-nodejs-es2015-development.html)  
+[Sublime Text 之运行 ES6 (基于babel)](http://www.52cik.com/2015/10/21/sublime-text-run-es6.html)  
+[Sublime Text内运行javascript(ES6)及代码检查](https://blog.csdn.net/fengzijinliang/article/details/52350410)  
 
 ### JsFormat
 
 PCI 已搜索安装 [`JsFormat`](https://github.com/jdc0589/JsFormat)（替代 `Javascript Beautify`）。
 
 调用命令：`Format: Javascript`
+
+如果工程安装使用了 ESLint，那么 [ESLint-Formatter](https://packagecontrol.io/packages/ESLint-Formatter) 是个不错的选择，因为他会执行 `eslint --fix` 修正不规范的地方。
 
 ### [eslint](https://eslint.org/)
 
@@ -119,13 +143,25 @@ If you think you already have a configuration file or if you need more help, ple
 1. `npm install -g jshint` 安装 jshint - npm；  
 2. PCI 搜索安装 `SublimeLinter-jshint`。
 
+**注意**：当使用 ES6 开发时务必把 jshint 关掉，否则报一堆警告错误。
+
+或者参考 [Atom 使用Jshint时const is available in ES6 (use esversion:6)](https://blog.csdn.net/u013887008/article/details/79304399) ，在项目的根目录新建一个文件名为 `.jshintrc` 的文件：
+
+```json
+{
+     "esversion": 6
+}
+```
+
+但这个可能会与 ES5 等有兼容问题？
+
 ### JavaScript Completions 和 Java​Script & Node​JS Snippets。
 
 输入提示，代码补全
 
 ## [wxapp](https://github.com/FloydaGithub/wxapp)
 
-用来开发微信小程序的 Sublime 插件。
+PCI 已搜索安装 wxapp，用来开发微信小程序的 Sublime 插件。
 
 快捷键 `⌥M`，弹出 `wxapp -> ` 浮窗。
 
