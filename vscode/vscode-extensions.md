@@ -4,12 +4,13 @@
 [How do I back up my VS Code settings and list of installed extensions?](https://superuser.com/questions/1080682/how-do-i-back-up-my-vs-code-settings-and-list-of-installed-extensions)
 
 ```shell
-faner@MBP-FAN:~|⇒  date
-Tue May 22 07:58:37 CST 2018
-
 faner@MBP-FAN:~|⇒  cd .vscode/extensions
+
+faner@MBP-FAN:~/.vscode/extensions|⇒  date
+Thu May 24 06:25:25 CST 2018
+
 faner@MBP-FAN:~/.vscode/extensions|⇒  ls -1
-CoenraadS.bracket-pair-colorizer-1.0.53
+CoenraadS.bracket-pair-colorizer-1.0.54
 EditorConfig.editorconfig-0.12.2
 Gruntfuggly.todo-tree-0.0.53
 HookyQR.beautify-1.3.0
@@ -20,7 +21,7 @@ alefragnani.project-manager-0.25.2
 azemoh.one-monokai-0.3.4
 christian-kohler.path-intellisense-1.4.2
 chrmarti.regex-0.2.0
-dbaeumer.vscode-eslint-1.4.9
+dbaeumer.vscode-eslint-1.4.10
 donjayamanne.githistory-0.4.1
 eamodio.gitlens-8.3.2
 emeryao.we-app-vscode-0.8.0
@@ -31,7 +32,7 @@ hoovercj.vscode-power-mode-2.2.0
 mdickin.markdown-shortcuts-0.8.1
 mohsen1.prettify-json-0.0.3
 ms-python.python-2018.4.0
-ms-vscode.cpptools-0.17.1
+ms-vscode.cpptools-0.17.3
 ms-vscode.go-0.6.80
 ms-vscode.sublime-keybindings-4.0.0
 msjsdiag.debugger-for-chrome-4.4.3
@@ -44,7 +45,7 @@ qinjia.vscode-wechat-0.0.6
 robertohuertasm.vscode-icons-7.23.0
 shakram02.bash-beautify-0.1.1
 shd101wyy.markdown-preview-enhanced-0.3.5
-shinnn.stylelint-0.36.1
+shinnn.stylelint-0.36.2
 sidthesloth.html5-boilerplate-1.0.3
 sleistner.vscode-fileutils-2.8.1
 slevesque.vscode-hexdump-1.6.0
@@ -53,7 +54,6 @@ wayou.vscode-todo-highlight-0.5.12
 wesbos.theme-cobalt2-2.1.6
 wmaurer.vscode-jumpy-0.3.1
 yzhang.markdown-all-in-one-1.4.0
-
 faner@MBP-FAN:~/.vscode/extensions|⇒  ls -1 | wc -l
       44
 ```
