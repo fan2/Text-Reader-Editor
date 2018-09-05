@@ -6,17 +6,15 @@
 
 ### bold
 
-**BOLD**
-
-bold testkkk
+`**BOLD**`：**BOLD**
 
 ### italic
 
-*italic*
+`*italic*`：*italic*
 
 ### strikethrough
 
-~~strikethrough~~
+`~~strikethrough~~`：~~strikethrough~~
 
 ### hyperlink
 
@@ -28,7 +26,7 @@ bold testkkk
 
 ### inline code
 
-`inline code`
+\`inline code\`：`inline code`
 
 ### code block
 
