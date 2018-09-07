@@ -25,6 +25,8 @@ Command Palette: `Change Language Mode` 设置当前文件的编程语言，类�
 
 [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#vscode)
 
+### commands
+
 ```shell
 # see help options
 ## 等价于 code -h
@@ -51,6 +53,13 @@ code --diff <file1> <file2>
 # open file at specific line and column <file:line[:character]>
 code --goto package.json:10:5
 ```
+
+可启用 zsh 默认自带的 `vscode` 插件，支持以下简化命令：
+
+- **`vsc`**：相当于 `code .`，新开 vscode 窗口打开当前工作目录。  
+- **`vscn`**：相当于 `code -n`，新开 vscode 窗口，其后可接 `.`、`file` 或 `folder`。  
+- **`vscr`**：相当于 `code -r`，复用（覆盖）最后一个活跃窗口，其后可接 `.`、`file` 或 `folder`。  
+- **`vscd`**：相当于 `code -d`，在最后一个活跃窗口打开文件对比。  
 
 ### Extensions Management
 
