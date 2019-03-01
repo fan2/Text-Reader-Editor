@@ -18,9 +18,14 @@
 
 ### hyperlink
 
+`[Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
+`:
+
 [Visual Studio Code - Code Editing. Redefined](https://code.visualstudio.com/)
 
 ### image
+
+`![vs-code](https://docs.microsoft.com/en-us/visualstudio/liveshare/media/vs-code.svg)`:
 
 ![vs-code](https://docs.microsoft.com/en-us/visualstudio/liveshare/media/vs-code.svg)
 
@@ -31,6 +36,10 @@
 ### code block
 
 javascript 代码示例：
+
+\`\`\`javascript
+javascript codeblock
+\`\`\`
 
 ```javascript
 var http = require('http');
@@ -44,6 +53,10 @@ http.createServer(function (req, res) {
 ```
 
 python 代码示例：
+
+\`\`\`python
+python codeblock
+\`\`\`
 
 ```python
 # main entry
@@ -79,6 +92,9 @@ Most Popular Extensions in marketplace:
 
 ### checkboxes
 
+`- [ ]`: unchecked  
+`- [x]`: checked  
+
 some preferences of User Settings:
 
 - [x] "editor.wordWrap": "on",
@@ -89,39 +105,6 @@ some preferences of User Settings:
 - [x] "powermode.enabled": true,
 
 > 默认的 preview 不支持列选框，可安装 MPE（Markdown Preview Enhanced）插件支持。
-
-### table
-
-## [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
-
-| Shortcuts         | Functionality      |
-| ----------------- | ------------------ |
-| cmd-k v           | Open preview       |
-| esc               | Toggle sidebar TOC |
-
-> 由于每次按下 <kbd>⌘</kbd><kbd>K</kbd> 再按下 <kbd>V</kbd> 总是在当前光标处输入一个字母 `v`，键快捷键调整为 **<kbd>⌘</kbd><kbd>K</kbd>**+**<kbd>⌘</kbd><kbd>V</kbd>** 更合理。
-
-MPE 插件已经支持数学公式、导出PDF，流程图和示意图等功能，无需再额外安装 TOC、Math、PDF 等插件。
-
-> Markdown Preview Enhanced uses [KaTeX](https://github.com/Khan/KaTeX) or [MathJax](https://github.com/mathjax/MathJax) to render math expressions.
-
-### [PDF export](https://shd101wyy.github.io/markdown-preview-enhanced/#/pdf?id=pdf-export)
-
-可不用装其他 PDF 导出插件，直接右键 `Open in Browser` 在浏览器中打印导出 PDF。  
-
-也可安装 **Puppeteer** 和 PhantomJS，支持导出三种格式：
-
-  - PDF  
-  - PNG  
-  - JPEG  
-
-1. [Chrome (Puppeteer) export](https://shd101wyy.github.io/markdown-preview-enhanced/#/puppeteer?id=chrome-puppeteer-export)
-
-  > 需先执行 `npm install -g puppeteer` 安装 puppeteer。
-
-2. [PhantomJS Export](https://shd101wyy.github.io/markdown-preview-enhanced/#/phantomjs?id=phantomjs-export)
-
-  > 需要先执行 `brew install phantomjs` 安装 phantomjs。
 
 ## Markdown Editor Enhanced
 
@@ -177,7 +160,7 @@ Context and title menu integration:
 | md-shortcut.showCommandPalette  | Display all commands                             | ctrl+M ctrl+M        |
 | md-shortcut.toggleBold          | Make **bold**                                    | ctrl+B               |
 | md-shortcut.toggleItalic        | Make _italic_                                    | ctrl+I               |
-| md-shortcut.toggleStrikethrough | Make ~~strikethrough~~                           |                      |
+| md-shortcut.toggleStrikethrough | Make ~~strikethrough~~                           | ⌥S(MAO)             |
 | md-shortcut.toggleHyperlink     | Make [a hyperlink](https://www.sogo.com)         | ctrl+L               |
 | md-shortcut.toggleImage         | Make an image `![](image_url.png)`               | ctrl+shift+L         |
 | md-shortcut.toggleCodeBlock     | Make ```a code block```                          | ctrl+M ctrl+C        |
@@ -185,16 +168,18 @@ Context and title menu integration:
 | md-shortcut.toggleBullets       | Make * bullet point                              | ctrl+M ctrl+B        |
 | md-shortcut.toggleNumbers       | Make 1. numbered list                            | ctrl+M ctrl+1        |
 | md-shortcut.toggleCheckboxes    | Make - [ ] check list (Github flavored markdown) | ctrl+M ctrl+X        |
-| md-shortcut.toggleTitleH1       | Toggle # H1 title                                |                      |
-| md-shortcut.toggleTitleH2       | Toggle ## H2 title                               |                      |
-| md-shortcut.toggleTitleH3       | Toggle ### H3 title                              |                      |
-| md-shortcut.toggleTitleH4       | Toggle #### H4 title                             |                      |
-| md-shortcut.toggleTitleH5       | Toggle ##### H5 title                            |                      |
-| md-shortcut.toggleTitleH6       | Toggle ###### H6 title                           |                      |
+| md-shortcut.toggleTitleH1       | Toggle # H1 title                                | ^⇧1(map)             |
+| md-shortcut.toggleTitleH2       | Toggle ## H2 title                               | ^⇧2(map)             |
+| md-shortcut.toggleTitleH3       | Toggle ### H3 title                              | ^⇧3(map)             |
+| md-shortcut.toggleTitleH4       | Toggle #### H4 title                             | ^⇧4(map)             |
+| md-shortcut.toggleTitleH5       | Toggle ##### H5 title                            | ^⇧5(map)             |
+| md-shortcut.toggleTitleH6       | Toggle ###### H6 title                           | ^⇧6(map)             |
 | md-shortcut.addTable            | Add Tabular values                               |                      |
 | md-shortcut.addTableWithHeader  | Add Tabular values with header                   |                      |
 
 开启了 Sublime Text Keymap 插件后，"ctrl+m" 默认映射为操作 "editor.action.jumpToBracket"，因此这里所有以 <kbd>^</kbd><kbd>M</kbd> 作为前导的快捷键组合都无效，可适当调整。
+
+> toggleTitle 相关快捷键配置参考下面的 keybindings。
 
 ### keybindings map to FoldingText
 
@@ -243,7 +228,7 @@ FoldingText 中插入超链接的快捷键组合为 `command+K`（<kbd>⌘</kbd>
 }
 ```
 
-保持采用 Markdown Shortcuts 的快捷键配置：
+采用默认的 Markdown Shortcuts：
 
 `md-shortcut.toggleHyperlink` : - <kbd>^</kbd><kbd>L</kbd>  
 `md-shortcut.toggleImage` : - <kbd>^</kbd><kbd>⇧</kbd><kbd>L</kbd>  
@@ -286,3 +271,53 @@ FoldingText 中插入 Inline Code 的快捷键组合为 `shift+command+C`（<kbd
 由于其唤起条件约束（when）更具体为编辑 Markdown 文件时（"editorTextFocus && editorLangId == 'markdown'"），且默认的 `cmd+l` 对应 expandLineSelection 操作在 Markdown 编辑时不太常用，故没啥影响。
 
 延续上述设置，可将 `md-shortcut.toggleCheckboxes` 操作的快捷键修改为 <kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>L</kbd>。
+
+> 默认的 ctrl+M 前导快捷键依旧可用。
+
+### table
+
+### CriticMarkup
+
+MPE 支持用 `==highlight==` 高亮文字。
+
+开启配置 "markdown-preview-enhanced.enableCriticMarkupSyntax" 之后，MPE 还支持 [CriticMarkup](http://criticmarkup.com/users-guide.php)：
+
+```
+{>>Comment<<}   // 不可见
+{==highlight==}
+{>>highlight<<} // ?
+{++Addition++}
+{--Deletion--}
+{~~~> Substitution~~}
+```
+
+## [Markdown Preview Enhanced](https://marketplace.visualstudio.com/items?itemName=shd101wyy.markdown-preview-enhanced)
+
+| Shortcuts         | Functionality      |
+| ----------------- | ------------------ |
+| cmd-k v           | Open preview       |
+| esc               | Toggle sidebar TOC |
+
+> 由于每次按下 <kbd>⌘</kbd><kbd>K</kbd> 再按下 <kbd>V</kbd> 总是在当前光标处输入一个字母 `v`，键快捷键调整为 **<kbd>⌘</kbd><kbd>K</kbd>**+**<kbd>⌘</kbd><kbd>V</kbd>** 更合理。
+
+MPE 插件已经支持数学公式、导出PDF，流程图和示意图等功能，无需再额外安装 TOC、Math、PDF 等插件。
+
+> Markdown Preview Enhanced uses [KaTeX](https://github.com/Khan/KaTeX) or [MathJax](https://github.com/mathjax/MathJax) to render math expressions.
+
+### [PDF export](https://shd101wyy.github.io/markdown-preview-enhanced/#/pdf?id=pdf-export)
+
+可不用装其他 PDF 导出插件，直接右键 `Open in Browser` 在浏览器中打印导出 PDF。  
+
+也可安装 **Puppeteer** 和 PhantomJS，支持导出三种格式：
+
+  - PDF  
+  - PNG  
+  - JPEG  
+
+1. [Chrome (Puppeteer) export](https://shd101wyy.github.io/markdown-preview-enhanced/#/puppeteer?id=chrome-puppeteer-export)
+
+  > 需先执行 `npm install -g puppeteer` 安装 puppeteer。
+
+2. [PhantomJS Export](https://shd101wyy.github.io/markdown-preview-enhanced/#/phantomjs?id=phantomjs-export)
+
+  > 需要先执行 `brew install phantomjs` 安装 phantomjs。
