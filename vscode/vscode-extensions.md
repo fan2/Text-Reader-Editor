@@ -4,79 +4,83 @@
 [How do I back up my VS Code settings and list of installed extensions?](https://superuser.com/questions/1080682/how-do-i-back-up-my-vs-code-settings-and-list-of-installed-extensions)
 
 ```shell
-faner@MBP-FAN:~|⇒  cd .vscode/extensions
+~ » tree -L 1 .vscode/extensions
 
-faner@MBP-FAN:~/.vscode/extensions|⇒  date
-Mon Jun 11 07:07:25 CST 2018
-
-# ls -1
-faner@MBP-FAN:~/.vscode/extensions|⇒  code --list-extensions --show-versions
-CoenraadS.bracket-pair-colorizer@1.0.58
-EditorConfig.EditorConfig@0.12.4
-Gruntfuggly.todo-tree@0.0.59
-HookyQR.minify@0.3.0
+~ » code --list-extensions --show-versions | wc -l
+      68
+~ » code --list-extensions --show-versions
+CoenraadS.bracket-pair-colorizer@1.0.61
+DotJoshJohnson.xml@2.5.0
+HookyQR.beautify@1.5.0
+HookyQR.minify@0.4.3
 IBM.output-colorizer@0.1.2
-Shan.code-settings-sync@2.9.2
-alefragnani.project-manager@0.25.2
+Zignd.html-css-class-completion@1.19.0
+alefragnani.project-manager@10.9.1
 anseki.vscode-color@0.4.5
-azemoh.one-monokai@0.3.4
+austin.code-gnu-global@0.2.2
+bbenoist.shell@0.3.0
+beaugust.blamer-vs@0.5.2
+christian-kohler.npm-intellisense@1.3.0
 christian-kohler.path-intellisense@1.4.2
 chrmarti.regex@0.2.0
-dbaeumer.vscode-eslint@1.4.12
-donjayamanne.githistory@0.4.1
+cliffordfajardo.highlight-line-vscode@0.0.1
+Dart-Code.dart-code@3.7.1
+Dart-Code.flutter@3.7.1
+dbaeumer.vscode-eslint@2.0.11
+dkundel.vscode-npm-source@1.0.0
+dunstontc.viml@0.1.7
 dzannotti.vscode-babel-coloring@0.0.4
-eamodio.gitlens@8.3.5
-eg2.tslint@1.0.30
+eamodio.gitlens@10.2.0
+earshinov.permute-lines@1.1.0
+EditorConfig.EditorConfig@0.14.4
+eg2.tslint@1.0.44
+eliean.vscode-svn@0.1.0
 emeryao.we-app-vscode@0.8.0
-fabiospampinato.vscode-open-in-browsers@1.1.4
+eriklynd.json-tools@1.0.2
+everettjf.filter-line@1.5.1
+fabiospampinato.vscode-open-in-browsers@1.1.7
 fknop.vscode-npm@3.3.0
-fmoronzirfas.open-in-marked@1.0.0
-formulahendry.auto-rename-tag@0.0.15
-gerane.Theme-Brogrammer@0.1.0
-HookyQR.beautify@1.3.1
+fmoronzirfas.open-in-marked@1.0.8
+formulahendry.auto-rename-tag@0.1.1
+formulahendry.code-runner@0.9.15
+Gruntfuggly.todo-tree@0.0.162
 hoovercj.vscode-power-mode@2.2.0
-johnstoncode.svn-scm@1.29.1
-mdickin.markdown-shortcuts@0.8.1
-miramac.vscode-exec-node@0.5.0
+jasonnutter.search-node-modules@1.3.0
+johnstoncode.svn-scm@2.2.1
+Lulus.vscode-regexp-preivew@1.0.0
+mdickin.markdown-shortcuts@0.12.0
+miramac.vscode-exec-node@0.5.1
+mitaki28.vscode-clang@0.2.3
 mohsen1.prettify-json@0.0.3
-ms-python.python@2018.5.0
-ms-vscode.cpptools@0.17.4
-ms-vscode.Go@0.6.82
-ms-vscode.sublime-keybindings@4.0.0
-msjsdiag.debugger-for-chrome@4.6.0
+ms-python.python@2019.11.50794
+ms-vscode.cpptools@0.26.2
+ms-vscode.Go@0.12.0
+msjsdiag.debugger-for-chrome@4.12.3
 naumovs.color-highlight@2.3.0
-nemesv.copy-file-name@1.0.0
-nonoroazoro.syncing@1.6.2
-octref.vetur@0.12.5
-patrys.vscode-code-outline@0.2.1
-pranaygp.vscode-css-peek@2.1.0
+naumovs.node-modules-resolve@1.0.2
+nemesv.copy-file-name@1.2.0
+nonoroazoro.syncing@3.0.13
+peterj.proto@0.0.2
+pranaygp.vscode-css-peek@3.0.2
 qinjia.vscode-wechat@0.0.6
-rbbit.typescript-hero@2.3.2
-robertohuertasm.vscode-icons@7.23.0
+rbbit.typescript-hero@3.0.0
 shakram02.bash-beautify@0.1.1
-shd101wyy.markdown-preview-enhanced@0.3.5
-shinnn.stylelint@0.36.3
+shd101wyy.markdown-preview-enhanced@0.5.0
+shinnn.stylelint@0.51.0
 sidthesloth.html5-boilerplate@1.0.3
-sleistner.vscode-fileutils@2.9.0
-slevesque.vscode-hexdump@1.6.0
-vscodevim.vim@0.12.0
-wayou.vscode-todo-highlight@0.5.12
-wesbos.theme-cobalt2@2.1.6
+sleistner.vscode-fileutils@3.0.0
+slevesque.vscode-hexdump@1.7.2
+twxs.cmake@0.0.17
+vincaslt.highlight-matching-tag@0.9.6
+vscode-icons-team.vscode-icons@9.7.0
+wayou.vscode-todo-highlight@1.0.4
 wmaurer.vscode-jumpy@0.3.1
-yzhang.markdown-all-in-one@1.4.0
-Zignd.html-css-class-completion@1.17.1
-
-# ls -1 | wc -l
-faner@MBP-FAN:~/.vscode/extensions|⇒  code --list-extensions --show-versions | wc -l
-      54
+yzhang.markdown-all-in-one@2.6.1
+zh9528.file-size@0.1.3
 ```
 
 ## list of disabled extensions
 
-1. Brogrammer Theme  
-2. Cobalt2 Theme Official  
-3. Code Outline  
-4. Git History  
-5. One Monokai Theme  
-6. Settings Sync  
-7. Vim  
+1. Git Tree Compare  
+2. Sublime Text Keymap  
+3. Vim  
