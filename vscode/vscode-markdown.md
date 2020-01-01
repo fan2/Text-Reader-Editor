@@ -149,6 +149,27 @@ MAO 插件在 Preferences - Keyboard Shorts 中的命令前缀也是 `markdown.e
     },
 ```
 
+### keybindings
+
+鉴于 macOS 下，`cmd+b` 默认是用于开关侧边栏（toggleSidebarVisibility），`cmd+i` 默认是扩选当前行（expandLineSelection），都比较常用，建议不覆盖，采用 Markdown Shortcuts 中以 ctrl 前导的快捷键（`ctrl+b` 和 `ctrl+i`）。
+
+在用户配置 keybindings.json 中屏蔽掉 MAO 的这两个快捷键：
+
+```json
+    {
+        "key": "cmd+b",
+        "command": "-markdown.extension.editing.toggleBold",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+    {
+        "key": "cmd+i",
+        "command": "-markdown.extension.editing.toggleItalic",
+        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
+    },
+```
+
+> 但是 windows 下的 `ctrl+b` 默认用于开关侧边栏（toggleSidebarVisibility）！
+
 ## [Markdown Shortcuts](https://marketplace.visualstudio.com/items?itemName=mdickin.markdown-shortcuts)
 
 Context and title menu integration:
@@ -257,24 +278,20 @@ Windows 下的 `ctrl+shift+1` 默认被以下命令占用：
 
 ### 粗斜删
 
-维持 MAO 和 Markdown Shortcuts 双重快捷键。
+对齐 MAO（markdown.extension.italic.indicator），将斜体的符号从 `_` 修改为 `*`：
 
 ```json
-    {
-        "key": "cmd+b",
-        "command": "markdown.extension.editing.toggleBold",
-        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
-    },
+    // Italics marker
+    "markdownShortcuts.italics.marker": "*",
+```
+
+移除有冲突的 MAO 粗斜快捷键，采用 Markdown Shortcuts 的快捷键：
+
+```json
     {
         "key": "ctrl+b",
         "command": "md-shortcut.toggleBold",
         "when": "editorTextFocus && markdownShortcuts:enabled"
-    },
-
-    {
-        "key": "cmd+i",
-        "command": "markdown.extension.editing.toggleItalic",
-        "when": "editorTextFocus && !editorReadonly && editorLangId == 'markdown'"
     },
     {
         "key": "ctrl+i",
@@ -326,80 +343,32 @@ macOS 采用默认的 Markdown Shortcuts：
 - `md-shortcut.toggleLink` : - <kbd>^</kbd><kbd>L</kbd>  
 - `md-shortcut.toggleImage` : - <kbd>^</kbd><kbd>⇧</kbd><kbd>L</kbd>  
 
-可考虑补充 when 条件 `&& editorHasSelection`，貌似没起到限制作用?
+> 可考虑补充 when 条件 `&& editorHasSelection`，貌似没起到限制作用?
 
-Windows 下 `ctrl+l` 被命令 `expandLineSelection` 占用，`ctrl+shift+l` 则被 `insertCursorAtEndOfEachLineSelected` 和 `selectHighlights` 命令占用，因此需要将相关快捷操作从 Default 复制到 User 中，优先响应并添加 `editorHasSelection` 条件：
-
-```json
-    { // 补充选中条件
-        "key": "ctrl+l",
-        "command": "md-shortcut.toggleLink",
-        "when": "editorTextFocus && markdownShortcuts:enabled && editorHasSelection"
-    },
-    { // 补充选中条件
-        "key": "ctrl+shift+l",
-        "command": "md-shortcut.toggleImage",
-        "when": "editorTextFocus && markdownShortcuts:enabled && editorHasSelection"
-    },
-```
-
-#### 同名默认绑定
-
-```json
-    {
-        "key": "ctrl+l",
-        "command": "workbench.debug.panel.action.clearReplAction",
-        "when": "inDebugRepl"
-    },
-```
+鉴于 Markdown Shortcuts 输入链接会弹出编辑弹窗，不太实用，且 Windows 下 `ctrl+l` 被命令 `expandLineSelection` 占用，`ctrl+shift+l` 则被 `selectHighlights` 命令占用。可屏蔽不采用 `ctrl+l`/`ctrl+shift+l` 作为插入文本和图片链接的快捷键，手打输入即可。
 
 ### 列表
 
 对齐 MAO（markdown.extension.toc.unorderedList.marker），将无序列表的符号从 `*` 修改为 `-`：
 
 ```json
-// Bullets marker
-"markdownShortcuts.bullets.marker": "-",
+    // Bullets marker
+    "markdownShortcuts.bullets.marker": "-",
 ```
 
-macOS 下对齐 FoldingText，可为 vscode 增加编辑 markdown 列表的快捷键：
+建议沿用默认分配的 `ctrl+m` 前导系列快捷键：
+
+* `md-shortcut.toggleBullets` : ctrl+m, ctrl+b  
+* `md-shortcut.toggleNumbers` : ctrl+m, ctrl+1  
+* `md-shortcut.toggleCheckboxes`：ctrl+m, ctrl+x  
+
+macOS 上也可考虑对齐 FoldingText，为 vscode 增加编辑 markdown 列表的备用快捷键：
 
 * `md-shortcut.toggleBullets` : <kbd>⌘</kbd><kbd>L</kbd>  
 * `md-shortcut.toggleNumbers` : <kbd>⇧</kbd><kbd>⌘</kbd><kbd>L</kbd>  
+* `md-shortcut.toggleCheckboxes`：<kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>L</kbd>  
 
-> 默认的 `cmd+l` 对应的功能 expandLineSelection 将被屏蔽。
-
-对齐上述设置，可增加 `md-shortcut.toggleCheckboxes` 的备用快捷键：<kbd>⌥</kbd><kbd>⇧</kbd><kbd>⌘</kbd><kbd>L</kbd>。
-
-```json
-    { // ctrl+m ctrl+b
-        "key": "cmd+l",
-        "command": "md-shortcut.toggleBullets",
-        "when": "editorTextFocus && markdownShortcuts:enabled"
-    },
-    { // ctrl+m ctrl+1
-        "key": "shift+cmd+l",
-        "command": "md-shortcut.toggleNumbers",
-        "when": "editorTextFocus && markdownShortcuts:enabled"
-    },
-    { // ctrl+m ctrl+x
-        "key": "shift+alt+cmd+l",
-        "command": "md-shortcut.toggleCheckboxes",
-        "when": "editorTextFocus && markdownShortcuts:enabled"
-    },
-```
-
-> Windows 下不宜用 win 键等效代替 cmd，沿用 `ctrl+m` 前导的相关快捷操作。
-
-#### 同名默认绑定
-
-```json
-    {
-        "key": "shift+cmd+l",
-        "command": "editor.action.selectHighlights",
-        "when": "editorFocus"
-    },
-```
+> 但是这会覆盖默认的常用操作，建议不采纳。
 
 ### 代码（块）
 
