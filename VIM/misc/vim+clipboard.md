@@ -1,7 +1,7 @@
 [os x 下 vim 无法复制到系统剪切板的问题](https://www.v2ex.com/t/96300)  
 [如何将 Vim 剪贴板里面的东西粘贴到 Vim 之外的地方？](https://www.zhihu.com/question/19863631)  
 
-## reg（"+）
+## reg
 
 vim 输入 `:h reg` 查看寄存器相关内容：
 
@@ -43,7 +43,23 @@ vim 输入 `:h reg` 查看寄存器相关内容：
                         [count] times.
 ```
 
-Vim 中的执行复制（yank）、删除（d,x,c）的内容都会被存放到默认的未命名寄存器（unnamed register）中，之后可以读取默认寄存器中的内容进行粘贴操作。
+Special registers:
+
+```
+'"'     the unnamed register, containing the text of the last delete or yank
+'%'     the current file name
+'#'     the alternate file name
+'*'     the clipboard contents (X11: primary selection)
+'+'     the clipboard contents
+'/'     the last search pattern
+':'     the last command-line
+'-'     the last small (less than a line) delete
+'.'     the last inserted text
+```
+
+底行模式输入 `:reg` 可列举查看寄存器，输入 `:reg %` 查看当前文件名，输入 `:reg +`（或 `:reg *`）查看剪贴板寄存器。
+
+---
 
 寄存器是完成这一过程的 **中转站**。Vim 支持的寄存器非常多，其中常用的有 `a-zA-Z0-9+"`。
 
@@ -52,9 +68,82 @@ Vim 中的执行复制（yank）、删除（d,x,c）的内容都会被存放到�
 - `"`（单个双引号）：未命名的寄存器，是 Vim 的默认寄存器，例如删除、复制等操作的内容都会被保存到这里。  
 - `+`：剪切板寄存器，关联系统剪切板，保存在这个寄存器中的内容可以被系统其他程序访问，也可以通过这个寄存器访问其他程序保存到剪切板中的内容。  
 
-vim 寄存器的数据作用域仅限于vim本地，甚至如果开多个vim窗口，每个窗口都有一套自己完整的寄存器，互相不影响。  
-日常的 `<C-c>`、`<C-v>` 使用的是系统剪贴板（system clipboard）。系统剪贴板作为系统级别的全局变量，两边当然不能混用。  
-所以 vim 专门提供了 `"+` 寄存器作为对系统剪贴板的映射，可以理解成自动把 `"+` 寄存器的内容再复制一份到系统剪贴板。  
+vim 寄存器的数据作用域仅限于vim本地，甚至如果开多个vim窗口，每个窗口都有一套自己完整的寄存器，互相不影响。
+
+Vim 中的执行复制（yank）、删除（d,x,c）的内容都会被存放到默认的未命名寄存器（unnamed register）中，之后可以读取默认寄存器中的内容进行粘贴操作。
+
+### general
+
+[Using vi buffers to copy lines](https://www1.udel.edu/it/help/unix/vi/vi-buffer.html)
+
+The vi editor allows you to copy text from your file into `temporary buffers` for use in other places in the file during your current vi work session. Each buffer acts like temporary memory, or, as some programs call it, a "clipboard" where you can temporarily store information.
+
+- `u`: undo;  
+- `yy`: yank;  
+
+`"ayy`	Copy the current line into a buffer named `a`.  
+`"b7yy`	Copy 7 lines into a buffer named `b`.  
+`"bp`	Put the information in the buffer named `b` after the current cursor position.  
+`"bP`	Put the information in the buffer named `b` before the current cursor position.  
+
+### C-r
+
+在插入（编辑）模式下，按下 `<C-r>`，当前光标处将会显示 `"` 提示输入寄存器。紧接着输入寄存器编号即可粘贴寄存器内容。
+
+```
+:h <C-r>
+
+CTRL-R {register}                                       c_CTRL-R c_<C-R>
+                Insert the contents of a numbered or named register.  Between
+                typing CTRL-R and the second character '"' will be displayed
+                to indicate that you are expected to enter the name of a
+                register.
+```
+
+## clipboard=unnamed
+
+执行 `:set clipboard ?` 查看 clipboard 的值，默认为空。
+
+在 `vim ~/.vimrc` 添加 `set clipboard=unnamed` 之后，y，d，x，p 和 ctrl-c/ctrl-v 一样，直接把内容复制到系统剪贴板。
+
+不建议这么配置，因为 vim 没有自己的 reg buffer 了，会带来诸多不便。
+建议开启 `+clipboard` 寄存器与系统剪贴板进行交互。
+
+---
+
+I just found that if you add following line into your `~/.vimrc` file,
+
+```
+set clipboard=unnamed
+```
+
+then VIM is **using system clipboard**
+
+---
+
+In your `~/.vimrc` file you can specify to automatically use the system clipboard for copy and paste.
+
+On Windows set:
+
+```
+set clipboard=unnamed
+```
+
+On Linux set (vim 7.3.74+):
+
+```
+set clipboard=unnamedplus
+```
+
+On macOS:
+
+`brew install vim`, and then append the following line to `~/.vimrc`
+
+```
+set clipboard=unnamed
+```
+
+now you can copy the line in vim with `yy` and paste it system-wide
 
 ## +clipboard
 
@@ -97,21 +186,12 @@ $  vim --version | grep clipboard
 +emacs_tags        -mouse_gpm         -sun_workshop      -xterm_clipboard
 ```
 
+### "+
+
+日常的 `<C-c>`、`<C-v>` 使用的是系统剪贴板（system clipboard）。系统剪贴板作为系统级别的全局变量，两边当然不能混用。  
+所以 vim 专门提供了 `"+` 寄存器作为对系统剪贴板的映射，可以理解成自动把 `"+` 寄存器的内容再复制一份到系统剪贴板。  
+
 非编辑模式下，输入 `"+yy` 复制光标所在行到系统剪切板，再执行 `"+p` 将系统剪切板的内容粘贴到 vim 当前光标处。
-
-### vi general buffer
-
-[Using vi buffers to copy lines](https://www1.udel.edu/it/help/unix/vi/vi-buffer.html)
-
-The vi editor allows you to copy text from your file into `temporary buffers` for use in other places in the file during your current vi work session. Each buffer acts like temporary memory, or, as some programs call it, a "clipboard" where you can temporarily store information.
-
-- `u`: undo;  
-- `yy`: yank;  
-
-`"ayy`	Copy the current line into a buffer named `a`.  
-`"b7yy`	Copy 7 lines into a buffer named `b`.  
-`"bp`	Put the information in the buffer named `b` after the current cursor position.  
-`"bP`	Put the information in the buffer named `b` before the current cursor position.  
 
 ### copy/paste
 
@@ -132,43 +212,3 @@ If you are using VIM in Windows, you can get access to the clipboard (MS copy/pa
 `"*P` -- paste line(s) on line before the cursor
 
 The lets you paste between separate VIM windows or between VIM and PC applications (notepad, word, etc).
-
-### clipboard=unnamed
-
-`vim ~/.vimrc` 添加 `set clipboard=unnamed` 之后，y，d，x，p 和 ctrl-c/ctrl-v 一样，直接把内容复制到系统剪贴板。
-
----
-
-I just found that if you add following line into your `~/.vimrc` file,
-
-```
-set clipboard=unnamed
-```
-
-then VIM is **using system clipboard**
-
----
-
-In your `~/.vimrc` file you can specify to automatically use the system clipboard for copy and paste.
-
-On Windows set:
-
-```
-set clipboard=unnamed
-```
-
-On Linux set (vim 7.3.74+):
-
-```
-set clipboard=unnamedplus
-```
-
-On macOS:
-
-`brew install vim`, and then append the following line to `~/.vimrc`
-
-```
-set clipboard=unnamed
-```
-
-now you can copy the line in vim with `yy` and paste it system-wide
