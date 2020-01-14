@@ -9,34 +9,18 @@ macOS 下的 pbcopy 和 pbpaste 命令提供了对剪贴板的复制粘贴支持
 pbcopy, pbpaste - provide copying and pasting to the pasteboard (the Clipboard) from command line
 ```
 
----
-
-On macOS, copy selected part: visually select text(type `v` or `V` in normal mode) and type `:w !pbcopy`
-
-Visually select the text and type:
-
-```
-ggVG
-!tee >(pbcopy)
-```
-
-Which I find nicer than:
-
-```
-ggVG
-:w !pbcopy
-```
-
-Since it doesn't flash up a prompt: `Press ENTER or type command to continue`
-
----
-
 On macOS, copy lines to system clipboard:
 
 1. copy line m: `:<m> w !pbcopy`  
 2. copy line m to n: `:<m>,<n> w !pbcopy`  
 3. copy the whole file `:%w !pbcopy`  
 4. paste from the clipboard `:r !pbpaste`  
+
+copy selected part: visually select text(type `v` or `V` in normal mode) and type `:w !pbcopy`
+
+1. Visually select the text and type: `ggVG`；  
+2. 输入 `:`，底行将提示 `:'<,'>`（range 为选中区段）；  
+3. 其后输入 `!tee >(pbcopy)`（ or `w !pbcopy`）即可拷贝到系统剪贴板。  
 
 On most Linux Distros, you can substitute:
 

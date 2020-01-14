@@ -1,4 +1,4 @@
-[os x 下 vim 无法复制到系统剪切板的问题](https://www.v2ex.com/t/96300)  
+[os x 下 vim 无法复制到系统剪贴板的问题](https://www.v2ex.com/t/96300)  
 [如何将 Vim 剪贴板里面的东西粘贴到 Vim 之外的地方？](https://www.zhihu.com/question/19863631)  
 
 ## reg
@@ -43,7 +43,7 @@ vim 输入 `:h reg` 查看寄存器相关内容：
                         [count] times.
 ```
 
-Special registers:
+**Special registers**:
 
 ```
 '"'     the unnamed register, containing the text of the last delete or yank
@@ -59,6 +59,8 @@ Special registers:
 
 底行模式输入 `:reg` 可列举查看寄存器，输入 `:reg %` 查看当前文件名，输入 `:reg +`（或 `:reg *`）查看剪贴板寄存器。
 
+> `%` 可作为很多命令的 range，例如 `:%d` 删除所有行，`:%s/foo/bar/gc` 查找替换全文。
+
 ---
 
 寄存器是完成这一过程的 **中转站**。Vim 支持的寄存器非常多，其中常用的有 `a-zA-Z0-9+"`。
@@ -66,7 +68,7 @@ Special registers:
 - `0-9`：表示数字寄存器，是 Vim 用来保存最近复制、删除等操作的内容，其中 0 号寄存器保存的是最近一次的操作内容。  
 - `a-zA-Z`：表示用户寄存器，Vim 不会读写这部分寄存器；  
 - `"`（单个双引号）：未命名的寄存器，是 Vim 的默认寄存器，例如删除、复制等操作的内容都会被保存到这里。  
-- `+`：剪切板寄存器，关联系统剪切板，保存在这个寄存器中的内容可以被系统其他程序访问，也可以通过这个寄存器访问其他程序保存到剪切板中的内容。  
+- `+`：剪贴板寄存器，关联系统剪贴板，保存在这个寄存器中的内容可以被系统其他程序访问，也可以通过这个寄存器访问其他程序保存到剪贴板中的内容。  
 
 vim 寄存器的数据作用域仅限于vim本地，甚至如果开多个vim窗口，每个窗口都有一套自己完整的寄存器，互相不影响。
 
@@ -86,9 +88,12 @@ The vi editor allows you to copy text from your file into `temporary buffers` fo
 `"bp`	Put the information in the buffer named `b` after the current cursor position.  
 `"bP`	Put the information in the buffer named `b` before the current cursor position.  
 
+普通模式下，输入 `"%p` 在当前光标后插入当前文件名。
+
 ### C-r
 
-在插入（编辑）模式下，按下 `<C-r>`，当前光标处将会显示 `"` 提示输入寄存器。紧接着输入寄存器编号即可粘贴寄存器内容。
+在插入（编辑）模式下，按下 `<C-r>`，当前光标处将会显示 `"` 提示输入寄存器。
+紧接着输入寄存器编号即可粘贴寄存器内容，例如输入 `%` 插入当前文件名。
 
 ```
 :h <C-r>
@@ -147,7 +152,7 @@ now you can copy the line in vim with `yy` and paste it system-wide
 
 ## +clipboard
 
-打开 vim 的 clipboard 属性后，vim 才会多出 `"+` 寄存器，映射为系统剪切板。
+打开 vim 的 clipboard 属性后，vim 才会多出 `"+` 寄存器，映射为系统剪贴板。
 
 [Vim: copy selection to OS X clipboard](https://stackoverflow.com/questions/677986/vim-copy-selection-to-os-x-clipboard)  
 
@@ -191,13 +196,13 @@ $  vim --version | grep clipboard
 日常的 `<C-c>`、`<C-v>` 使用的是系统剪贴板（system clipboard）。系统剪贴板作为系统级别的全局变量，两边当然不能混用。  
 所以 vim 专门提供了 `"+` 寄存器作为对系统剪贴板的映射，可以理解成自动把 `"+` 寄存器的内容再复制一份到系统剪贴板。  
 
-非编辑模式下，输入 `"+yy` 复制光标所在行到系统剪切板，再执行 `"+p` 将系统剪切板的内容粘贴到 vim 当前光标处。
+非编辑模式下，输入 `"+yy` 复制光标所在行到系统剪贴板，再执行 `"+p` 将系统剪贴板的内容粘贴到 vim 当前光标处。
 
 ### copy/paste
 
 [Copy and paste content from one file to another file in vi](https://stackoverflow.com/questions/4620672/copy-and-paste-content-from-one-file-to-another-file-in-vi)
 
----
+When using `"*` register under X11, also see x11-selection. This also explains the related `"+` register.
 
 requires `+clipboard` out of `vim --version`
 
