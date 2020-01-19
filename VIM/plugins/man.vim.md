@@ -1,9 +1,11 @@
-# [man.vim](http://www.vim.org/scripts/script.php?script_id=5615)  
+# [man.vim](http://www.vim.org/scripts/script.php?script_id=5615)
+
 [vim-man](https://github.com/vim-utils/vim-man) @ github  
 
 man.vim 插件用于在 vim 底行模式通过 Man 命令启动分屏窗口作为 [man-page viewer](http://vim.wikia.com/wiki/Using_vim_as_a_man-page_viewer_under_Unix) 查看 man 帮助手册，这样可以一边使用 vim 编写程序，一边可以 man 程序 API 文档。  
 
 ## whereis
+
 man.vim 插件是 vim 自带的，相关插件脚本存放在 `/usr/share/vim/vim[0-9][0-9]` 的 `/ftplugin/` 和  `/syntax/` 目录下：  
 
 ```Shell
@@ -33,6 +35,7 @@ specman.vim
 ```
 
 ## config & source
+
 在 vim 编辑器中输入 <kbd>:</kbd> 进入单行命令模式或按下 <kbd>Q</kbd>（`<S-q>`）进入 Ex 多行命令行模式，再依次输入 `:echo $VIM` 和 `:echo $VIMRUNTIME` 即可检查 vim 环境变量。
 
 ![$VIMRUNTIME](images/$VIMRUNTIME.png)
@@ -42,7 +45,7 @@ specman.vim
 （1）如果没有定义环境变量 `VIMRUNTIME`，则可执行 `vim ~/.vimrc` 打开编辑 vim 配置文件，增加以下行设置环境变量：
 
 ```Shell
-" 配置环境变量，如果版本升级了要修改！                                      
+" 配置环境变量，如果版本升级了要修改！
 let $VIMRUNTIME="/usr/share/vim/vim80"
 set runtimepath=/usr/share/vim/vim80
 ```

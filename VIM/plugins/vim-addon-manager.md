@@ -9,6 +9,7 @@
 [vim-addon-manager - 有效的管理你的vim插件](http://www.cnblogs.com/lexus/archive/2012/11/02/2751073.html)  
 
 ## [VOoM](http://www.vim.org/scripts/script.php?script_id=2657)
+
 VOoM (Vim Outliner of Markups) is a plugin for Vim that emulates a two-pane text outlineer.
 
 [vim-voom (5.2-1)](https://packages.debian.org/sid/vim-voom) for debian
@@ -72,10 +73,12 @@ voom  voom.vim
 ```
 
 ### netrw
+
 [nerdtree](https://github.com/scrooloose/nerdtree) - tree explorer plugin for vim  
 [Vim: you don't need NERDtree or (maybe) netrw](https://shapeshed.com/vim-netrw/)  
 
 ### ActivateAddons
+
 在 ~/.vimrc 中添加以下行：
 
 ```Shell
