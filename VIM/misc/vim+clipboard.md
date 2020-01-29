@@ -72,7 +72,11 @@ vim 输入 `:h reg` 查看寄存器相关内容：
 
 vim 寄存器的数据作用域仅限于vim本地，甚至如果开多个vim窗口，每个窗口都有一套自己完整的寄存器，互相不影响。
 
-Vim 中的执行复制（yank）、删除（d,x,c）的内容都会被存放到默认的未命名寄存器（unnamed register）中，之后可以读取默认寄存器中的内容进行粘贴操作。
+### "" & "0
+
+Vim 中执行删除（d,x,c）的内容都会被存放到默认的未命名寄存器（unnamed register,`""`）中，之后可以读取默认寄存器中的内容进行粘贴操作。  
+Vim 中执行复制（y[ank]）命令时，要复制的文本不仅会被拷贝到无名寄存器中（`""`），还会拷贝到复制 *专用寄存器*（`"0`）中。  
+这样，当我们在执行复制操作后，如果执行了删除操作，还可以执行 `"0p` 从复制专用寄存器中找回上次复制的内容进行粘贴。
 
 ### general
 
@@ -89,6 +93,15 @@ The vi editor allows you to copy text from your file into `temporary buffers` fo
 `"bP`	Put the information in the buffer named `b` before the current cursor position.  
 
 普通模式下，输入 `"%p` 在当前光标后插入当前文件名。
+
+### uppercase
+
+假设我们想搜索文档内所有的 `TODO` 并将其收集到一起，可参考以下步骤：
+
+1. 执行 `qaq` 录制空宏，清除寄存器 `"a`；  
+2. 执行 `:g/TODO/yank A`，将匹配的内容追加（而非覆盖）到指定寄存器。  
+
+> use uppercase character to **append** with delete and yank
 
 ### C-r
 
