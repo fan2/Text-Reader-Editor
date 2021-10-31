@@ -41,24 +41,36 @@ Linting, Debugging (multi-threaded, remote), Intellisense, code formatting, refa
 
 ![vscode-python-commands-Select_Linter](./images/vscode-python-commands-Select_Linter.png)
 
-默认配置（Default User Settings）中开启了 pylint: 
+默认配置（Default User Settings）中开启了 python.linting 和保存时 lint 检测: 
 
 ```json
   // Whether to lint Python files.
   // Python: Enable Linting
   "python.linting.enabled": true,
-  
-  // Whether to lint Python files using pylint.
-  "python.linting.pylintEnabled": true,
-  
+
   // Whether to lint Python files using flake8
   "python.linting.flake8Enabled": false,
 
+  // Whether to lint Python files using mypy.
+  "python.linting.mypyEnabled": false,
+
+  // Whether to lint Python files using prospector.
+  "python.linting.prospectorEnabled": false,
+
+  // Whether to lint Python files using pycodestyle
+  "python.linting.pycodestyleEnabled": false,
+
+  // Whether to lint Python files using pydocstyle
+  "python.linting.pydocstyleEnabled": false,
+
+  // Whether to lint Python files using pylama.
+  "python.linting.pylamaEnabled": false,
+
+  // Whether to lint Python files using pylint.
+  "python.linting.pylintEnabled": false,
+
   // Whether to lint Python files when saved.
   "python.linting.lintOnSave": true,
-
-  // Whether to lint Python files using pep8
-  "python.linting.pep8Enabled": false,
 ```
 
 但是本地 pip(3) 并未安装 pylint，所以底部弹出提示 `Linter pylint is not installed.`
@@ -67,12 +79,9 @@ Linting, Debugging (multi-threaded, remote), Intellisense, code formatting, refa
 
 终端执行 `pip3 list` 查看是否已安装了 **flake8**，如果未安装 flake8，可先执行 `pip3 install flake8` 安装。
 
-修改 User Settings 禁用 pyling，启用 flake8: 
+修改 User Settings 启用 flake8: 
 
 ```json
-  // Whether to lint Python files using pylint.
-  "python.linting.pylintEnabled": false,
-  
   // Whether to lint Python files using flake8
   "python.linting.flake8Enabled": true,
 ```
@@ -90,6 +99,26 @@ Linting, Debugging (multi-threaded, remote), Intellisense, code formatting, refa
 控制台 PROBLEMS 中也会列出 flake8 检测结果：
 
 ![vscode-python-Problems](./images/vscode-python-Problems.png)
+
+### MaxLineLength
+
+[How to tell flake8 to ignore comments](https://stackoverflow.com/questions/47876079/how-to-tell-flake8-to-ignore-comments)
+
+create a configuration file named `.flake8` in project directory:
+
+```
+[flake8]
+per-file-ignores =
+    # line too long
+    path/to/file.py: E501,
+```
+
+[vscode 编写python如何禁止 flake8 提示 line too long](https://www.cnblogs.com/tangxin-blog/p/6065017.html)
+[修改在 Visual Studio Code 中 autopep8 的單行長度設定](https://exfast.me/2020/04/python-modify-the-single-line-length-setting-of-autopep8-in-visual-studio-code/)
+
+```
+    "python.linting.flake8Args": ["--max-line-length=120"],
+```
 
 ## Workspace Symbols
 
@@ -161,3 +190,47 @@ $ pip3 install yapf
 ```
 
 使用快捷键 <kbd>⌥</kbd><kbd>⇧</kbd><kbd>F</kbd> 即可调用 yapf 格式化 python 代码（format document）。
+
+### MaxLineLength
+
+[2020年，PEP8指定一行最大长度79的标准是否值得坚持？](https://www.dongwm.com/post/pep8-max-line-length/)
+
+[PEP 8 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/) - [Maximum Line Length](https://www.python.org/dev/peps/pep-0008/#maximum-line-length)  
+
+Limit all lines to a maximum of 79 characters.
+
+For flowing long blocks of text with fewer structural restrictions (docstrings or comments), the line length should be limited to 72 characters.
+
+Limiting the required editor window width makes it possible to have several files open side by side, and works well when using code review tools that present the two versions in adjacent columns.
+
+The default wrapping in most tools disrupts the visual structure of the code, making it more difficult to understand. The limits are chosen to avoid wrapping in editors with the window width set to 80.
+
+[Disable auto wrap long line in Visual Studio Code](https://stackoverflow.com/questions/47406741/disable-auto-wrap-long-line-in-visual-studio-code)
+
+autopep8Args 配置一行显示列数：
+
+```json
+    "python.formatting.provider": "autopep8"
+    // "python.formatting.autopep8Args": ["--max-line-length=120"],
+    "python.formatting.autopep8Args": [
+        "--max-line-length", "120", "--experimental"
+    ],
+```
+
+yapfArgs 对应配置：
+
+```json
+    "python.formatting.yapfArgs": [
+        "--style", "{based_on_style: chromium, indent_width: 20}"
+    ],
+```
+
+pylintArgs 对应配置：
+
+Autopep8 requires `--aggressive` in order to recommend non-whitespace changes:
+
+```
+    "python.linting.pylintArgs": ["--max-line-length", "120", "--aggressive"]
+```
+
+This will wrap the long lines for you. —— 未实践验证
