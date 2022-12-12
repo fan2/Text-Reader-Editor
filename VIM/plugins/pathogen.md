@@ -123,7 +123,7 @@ Checking connectivity... done.
 ## 安装 vim-marked 插件
 克隆 [vim-marked](https://github.com/itspriddle/vim-marked) 插件的 github repo 到 `~/.vim/bundle/` 目录下：
 
-```shell
+```Shell
 faner@MBP-FAN:~|⇒  cd ~/.vim/bundle/ && git clone https://github.com/itspriddle/vim-marked.git
 Cloning into 'vim-marked'...
 remote: Counting objects: 130, done.
@@ -142,7 +142,7 @@ README.markdown doc             plugin
 
 使用说明（Usage）：
 
-```shell
+```Shell
 :MarkedOpen[!]          Open the current Markdown buffer in Marked. Call with
                         a bang to prevent Marked from stealing focus from Vim.
                         Documents opened in Marked are tracked and closed

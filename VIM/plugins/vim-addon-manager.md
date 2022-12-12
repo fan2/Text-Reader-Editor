@@ -52,11 +52,11 @@ Info: installing removed addon 'matchit' to /home/pi/.vim
 ```Shell
 pi@raspberrypi:~$ vim-addons status
 # Name                     User Status  System Status 
-editexisting                removed       removed       
-jinja                       removed       removed       
-justify                     removed       removed       
-matchit                     installed     removed       
-voom                        installed     removed 
+editexisting                removed       removed
+jinja                       removed       removed
+justify                     removed       removed
+matchit                     installed     removed
+voom                        installed     removed
 ```
 
 查看 `~/.vim/` 目录：
