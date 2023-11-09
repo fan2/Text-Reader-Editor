@@ -79,9 +79,11 @@ Linting, Debugging (multi-threaded, remote), Intellisense, code formatting, refa
 
 终端执行 `pip3 list` 查看是否已安装了 **flake8**，如果未安装 flake8，可先执行 `pip3 install flake8` 安装。
 
-修改 User Settings 启用 flake8: 
+修改 User Settings 禁用 pylint，启用 flake8：
 
 ```json
+  // Whether to lint Python files using pylint.
+  "python.linting.pylintEnabled": false,
   // Whether to lint Python files using flake8
   "python.linting.flake8Enabled": true,
 ```
@@ -99,6 +101,27 @@ Linting, Debugging (multi-threaded, remote), Intellisense, code formatting, refa
 控制台 PROBLEMS 中也会列出 flake8 检测结果：
 
 ![vscode-python-Problems](./images/vscode-python-Problems.png)
+
+### 2023最新配置flake8
+
+08Nov23最新的vscode Version: 1.84.1，配置中不再有 `python.linting` 等选项。
+
+参考 [Linting Python in Visual Studio Code](https://code.visualstudio.com/docs/python/linting)：
+
+> Linting is distinct from Formatting because linting analyzes how the code runs and detects errors whereas formatting only restructures how code appears.
+
+安装 [Flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8) 插件后，默认自动开启 Flake8 作为 python linter。
+
+> Once installed in Visual Studio Code, flake8 will be automatically executed when you open a Python file.
+
+如果不安装 Flake8，则默认走Pylance的静态语法检查机制。
+
+**思考**：
+
+1. 如何配置 `flake8.path` 指定 conda 中 pip 安装的 flake8？
+2. 如何配置 `flake8.ignorePatterns` 设置 MaxLineLength 为 120，忽略 E501 错误提示？
+
+[python flake8 ignore E501 and max-line-length](https://stackoverflow.com/questions/64435962/python-flake8-ignore-e501-and-max-line-length)
 
 ### MaxLineLength
 
@@ -173,6 +196,25 @@ vscode 默认使用 autopep8 作为格式化工具：
 ```
 
 使用快捷键 <kbd>⌥</kbd><kbd>⇧</kbd><kbd>F</kbd> 即可调用 autopepe8 格式化 python 代码（format document）。
+
+### 2023最新配置autopep8
+
+08Nov23最新的vscode Version: 1.84.1，配置中不再有 `python.formatting.provider` 选项。
+
+参考 [Formatting Python in VS Code](https://code.visualstudio.com/docs/python/formatting)：
+
+> Keep in mind, formatting doesn't affect the functionality of the code itself.
+> Linting helps to prevent errors by analyzing code for common syntactical, stylistic, and functional errors and unconventional programming practices.
+> Although there is a little overlap between formatting and linting, the two capabilities are complementary.
+
+安装插件 [autopep8](https://marketplace.visualstudio.com/items?itemName=ms-python.autopep8) 后，修改 User Settings 启用指定 editor 编辑 python 语言时，使用格式化器 autopep8：
+
+```json
+    "[python]": {
+      "editor.defaultFormatter": "ms-python.autopep8",
+      // "editor.formatOnSave": true // 保存时，自动格式化
+    }
+```
 
 ### [yapf](https://github.com/google/yapf)
 
