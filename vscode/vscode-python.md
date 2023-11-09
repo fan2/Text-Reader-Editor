@@ -116,6 +116,10 @@ Linting, Debugging (multi-threaded, remote), Intellisense, code formatting, refa
 
 如果不安装 Flake8，则默认走Pylance的静态语法检查机制。
 
+[Do I need to install a linter package if I'm using Pylance? #818](https://github.com/microsoft/pylance-release/issues/818)
+
+Jake Bailey：I'm not entirely certain why it's asking for it to be installed when you have Pylance, though.
+
 **思考**：
 
 1. 如何配置 `flake8.path` 指定 conda 中 pip 安装的 flake8？

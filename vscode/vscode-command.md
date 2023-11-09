@@ -25,6 +25,23 @@ Command Palette: `Change Language Mode` 设置当前文件的编程语言，类�
 
 [Visual Studio Code Tips and Tricks](https://code.visualstudio.com/docs/getstarted/tips-and-tricks#vscode)
 
+### terminal
+
+如果使用 brew 安装的 vscode，默认已经创建了命令软链 `/usr/local/bin/code`。
+如果是手动从官网下载安装的，则需要手动设置命令行：
+
+`vim ~/.zshrc` 编辑 `.zshrc`，将code可执行命令添加到系统环境变量PATH中：
+
+```Shell
+export PATH=/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin:$PATH
+```
+
+或者建立一个 alias 替身快捷命令 code：
+
+```Shell
+alias code='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+```
+
 ### commands
 
 ```shell
