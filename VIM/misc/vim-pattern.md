@@ -3,8 +3,24 @@
 
 ## [如何去掉当次搜索高亮？](http://forum.ubuntu.org.cn/viewtopic.php?p=815643)
 
-> 方法一：`:noh` 或 `:nohl` 或 `:nohls` 或 `:nohlsearch`  
-> 方法二：/awertgvcxz，查找一个根本不存在的字符串，消除高亮  
+[highlight - Vim clear last search highlighting - Stack Overflow](https://stackoverflow.com/questions/657447/vim-clear-last-search-highlighting)
+
+After doing a search in Vim, I get all the occurrences highlighted. How can I disable that? I now do another search for something gibberish that can't be found. Is there a way to just temporarily disable the highlight and then re-enable it when needed again?
+
+1. To turn off highlighting until the next search: `:noh`/`:nohl`/`:nohls`/`:nohlsearch`.
+2. Or turn off highlighting completely: `:set nohlsearch`; type `:set hlsearch` to turn on again.
+3. From the [VIM Documentation](http://vimdoc.sourceforge.net/htmldoc/pattern.html#last-pattern)，to clear the last used search pattern: `:let @/ = ""`
+
+[Clear Search Highlight in Vim — tech.serhatteker.com](https://tech.serhatteker.com/post/2020-03/clear-search-highlight-in-vim/)
+
+I personally use ’temporarily disable’ with key mapping. I mapped :noh to <esc> key. Since hitting <esc> is a very common and intuitive situtation in Vim.
+
+```vim
+" noh - no highlight
+map <esc> :noh <CR>
+```
+
+[Clear search highlight - VimTricks](https://vimtricks.com/p/clear-search-highlight/)
 
 ## [incsearch](http://www.vim.org/scripts/script.php?script_id=5038)
 
